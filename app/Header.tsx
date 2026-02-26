@@ -10,9 +10,13 @@ export default function NavigationHeader() {
       boxShadow: '0 0 30px rgba(198, 40, 40, 0.2), inset 0 1px 0 rgba(198, 40, 40, 0.1)'
     }}>
       <nav className="mx-auto max-w-4xl px-4 py-4 flex items-center justify-between">
-        <a href="/" className="font-display text-sm sm:text-lg font-semibold text-cream hover:text-barn transition-colors duration-300 flex-shrink-0">
+        <a href="/" className="flex items-center gap-2 font-display text-sm sm:text-lg font-semibold text-cream hover:text-barn transition-colors duration-300 flex-shrink-0">
+          <img 
+            src="/favicon.png" 
+            alt="CGS Logo" 
+            className="h-8 w-8 sm:h-9 sm:w-9 rounded"
+          />
           <span className="hidden sm:inline">Country Guitar Standard</span>
-          <span className="sm:hidden">CGS</span>
         </a>
         
         {/* Desktop Navigation */}
