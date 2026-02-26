@@ -32,7 +32,7 @@ export default function ContactForm() {
       })
 
       if (!res.ok) throw new Error('Failed to send message')
-      setMessage('Thanks! I'll get back to you soon.')
+      setMessage("Thanks! I'll get back to you soon.")
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (err) {
       setError('Something went wrong. Please try again.')
