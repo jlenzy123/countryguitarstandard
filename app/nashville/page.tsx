@@ -25,102 +25,30 @@ export default function NashvillePage() {
       <div className="border-l-4 border-barn pl-4">
         <h1 className="font-display text-3xl font-medium text-cream">Nashville Number System</h1>
         <p className="mt-2 text-cream-muted">
-          Convert between chord names and numbers in any key. Learn how charts work.
+          Convert between chord names and numbers in any key.
         </p>
       </div>
 
+      {/* Main converter + scale reference - combined at top */}
       <section className="mt-10 rounded-lg bg-void-card border border-barn/40 p-6">
-        <h2 className="font-display font-medium text-cream">How it works</h2>
-        <p className="mt-2 text-sm text-cream-muted">
-          In any key, the scale degrees are numbered 1–7. The 1 chord is the tonic (e.g. G in G major),
-          4 is the subdominant (C), 5 is the dominant (D). Lowercase “m” means minor (e.g. 6m = Em in G).
-          So a chart like <strong className="text-cream">1 4 5 1</strong> means the same progression in every key—
-          in G it’s G C D G, in C it’s C F G C. Session players and songwriters use numbers so a song can be
-          called in any key without rewriting the chart.
-        </p>
-      </section>
-
-      <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
-        <h2 className="font-display font-medium text-cream">Chords → Numbers</h2>
-        <p className="mt-1 text-sm text-cream-muted">
-          Enter chord names (e.g. G C D Em). Key sets the scale.
-        </p>
-        <form onSubmit={handleChordsToNumbers} className="mt-4 space-y-3">
-          <div>
-            <label className="block text-sm text-cream-muted">Key</label>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+          <h2 className="font-display font-medium text-cream text-xl">Quick Reference</h2>
+          <div className="flex items-center gap-2">
+            <label className="text-sm text-cream-muted">Key:</label>
             <select
               value={key}
               onChange={(e) => setKey(e.target.value)}
-              className="mt-1 w-full rounded border border-saddle/50 bg-void px-4 py-2.5 text-cream"
+              className="rounded border border-barn/50 bg-void px-3 py-1.5 text-cream text-sm"
             >
               {KEY_ORDER.map((k) => (
                 <option key={k} value={k}>{k}</option>
               ))}
             </select>
           </div>
-          <div>
-            <label className="block text-sm text-cream-muted">Chords</label>
-            <input
-              type="text"
-              value={chordInput}
-              onChange={(e) => setChordInput(e.target.value)}
-              placeholder="G C D Em"
-              className="mt-1 w-full rounded border border-saddle/50 bg-void px-4 py-2.5 text-cream placeholder-cream-muted"
-            />
-          </div>
-          <button type="submit" className="rounded bg-barn px-4 py-2 text-cream font-medium hover:bg-barn-hover">
-            Convert to numbers
-          </button>
-        </form>
-        {numberResult && (
-          <p className="mt-3 font-mono text-cream">
-            Numbers: <strong className="text-gold">{numberResult}</strong>
-          </p>
-        )}
-      </section>
+        </div>
 
-      <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
-        <h2 className="font-display font-medium text-cream">Numbers → Chords</h2>
-        <p className="mt-1 text-sm text-cream-muted">
-          Enter Nashville numbers (e.g. 1 4 5 6m 4 5 1). Key sets the scale.
-        </p>
-        <form onSubmit={handleNumbersToChords} className="mt-4 space-y-3">
-          <div>
-            <label className="block text-sm text-cream-muted">Key</label>
-            <select
-              value={key}
-              onChange={(e) => setKey(e.target.value)}
-              className="mt-1 w-full rounded border border-saddle/50 bg-void px-4 py-2.5 text-cream"
-            >
-              {KEY_ORDER.map((k) => (
-                <option key={k} value={k}>{k}</option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm text-cream-muted">Numbers</label>
-            <input
-              type="text"
-              value={numberInput}
-              onChange={(e) => setNumberInput(e.target.value)}
-              placeholder="1 4 5 6m 4 5 1"
-              className="mt-1 w-full rounded border border-saddle/50 bg-void px-4 py-2.5 text-cream placeholder-cream-muted"
-            />
-          </div>
-          <button type="submit" className="rounded bg-barn px-4 py-2 text-cream font-medium hover:bg-barn-hover">
-            Convert to chords
-          </button>
-        </form>
-        {chordResult && (
-          <p className="mt-3 font-mono text-cream">
-            Chords: <strong className="text-gold">{chordResult}</strong>
-          </p>
-        )}
-      </section>
-
-      <section className="mt-10 rounded-lg bg-void-card border border-denim/40 p-6">
-        <h2 className="font-display font-medium text-cream mb-4">Scale degrees in {key}</h2>
-        <div className="grid grid-cols-7 gap-2 text-center">
+        {/* Scale degrees grid */}
+        <div className="grid grid-cols-7 gap-2 text-center mb-6">
           {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num) => {
             const chord = numbersToChords(num, key).trim()
             return (
@@ -131,9 +59,72 @@ export default function NashvillePage() {
             )
           })}
         </div>
+
+        {/* Numbers to chords converter */}
+        <div className="border-t border-barn/20 pt-5">
+          <form onSubmit={handleNumbersToChords} className="flex flex-col sm:flex-row gap-3">
+            <div className="flex-1">
+              <input
+                type="text"
+                value={numberInput}
+                onChange={(e) => setNumberInput(e.target.value)}
+                placeholder="Enter numbers (e.g. 1 4 5 6m)"
+                className="w-full rounded border border-barn/50 bg-void px-4 py-2.5 text-cream placeholder-cream-muted"
+              />
+            </div>
+            <button type="submit" className="rounded bg-barn px-5 py-2.5 text-cream font-medium hover:bg-barn-hover whitespace-nowrap">
+              Get Chords
+            </button>
+          </form>
+          {chordResult && (
+            <p className="mt-3 font-mono text-lg text-cream">
+              → <strong className="text-gold">{chordResult}</strong>
+            </p>
+          )}
+        </div>
+
         <p className="mt-4 text-xs text-cream-muted text-center">
-          Major chords: 1, 4, 5 · Minor chords: 2m, 3m, 6m · Diminished: 7dim
+          Major: 1, 4, 5 · Minor: 2m, 3m, 6m · Diminished: 7dim
         </p>
+      </section>
+
+      {/* How it works */}
+      <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
+        <h2 className="font-display font-medium text-cream">How it works</h2>
+        <p className="mt-2 text-sm text-cream-muted">
+          In any key, the scale degrees are numbered 1–7. The 1 chord is the tonic (e.g. G in G major),
+          4 is the subdominant (C), 5 is the dominant (D). Lowercase "m" means minor (e.g. 6m = Em in G).
+          So a chart like <strong className="text-cream">1 4 5 1</strong> means the same progression in every key—
+          in G it's G C D G, in C it's C F G C. Session players and songwriters use numbers so a song can be
+          called in any key without rewriting the chart.
+        </p>
+      </section>
+
+      {/* Chords to numbers converter */}
+      <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
+        <h2 className="font-display font-medium text-cream">Chords → Numbers</h2>
+        <p className="mt-1 text-sm text-cream-muted">
+          Enter chord names to see their Nashville numbers in the selected key.
+        </p>
+        <form onSubmit={handleChordsToNumbers} className="mt-4 flex flex-col sm:flex-row gap-3">
+          <div className="flex-1">
+            <input
+              type="text"
+              value={chordInput}
+              onChange={(e) => setChordInput(e.target.value)}
+              placeholder="Enter chords (e.g. G C D Em)"
+              className="w-full rounded border border-saddle/50 bg-void px-4 py-2.5 text-cream placeholder-cream-muted"
+            />
+          </div>
+          <button type="submit" className="rounded bg-barn px-5 py-2.5 text-cream font-medium hover:bg-barn-hover whitespace-nowrap">
+            Get Numbers
+          </button>
+        </form>
+        {numberResult && (
+          <p className="mt-3 font-mono text-lg text-cream">
+            → <strong className="text-gold">{numberResult}</strong>
+          </p>
+        )}
       </section>
 
       <p className="mt-10 text-sm text-cream-muted">
