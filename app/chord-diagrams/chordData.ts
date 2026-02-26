@@ -30,8 +30,21 @@ export const CHORD_DATABASE: Record<string, ChordData> = {
     name: 'D',
     voicings: [
       { name: 'D', style: 'open', frets: [-1, -1, 0, 2, 3, 2], fingers: [0, 0, 0, 1, 3, 2] },
-      { name: 'D (easy)', style: 'easy', frets: [-1, -1, 0, 2, 3, 0], fingers: [0, 0, 0, 1, 2, 0] },
+      { name: 'D (2 finger)', style: 'easy', frets: [-1, -1, 0, 2, 3, -1], fingers: [0, 0, 0, 1, 2, 0] },
       { name: 'D (barre)', style: 'barre', frets: [-1, 5, 7, 7, 7, 5], fingers: [0, 1, 2, 3, 4, 1], barreString: 5, baseFret: 5 },
+      { name: 'D (power)', style: 'power', frets: [-1, -1, 0, 2, 3, -1], fingers: [0, 0, 0, 1, 2, 0] },
+    ],
+  },
+  Dsus2: {
+    name: 'Dsus2',
+    voicings: [
+      { name: 'Dsus2', style: 'open', frets: [-1, -1, 0, 2, 3, 0], fingers: [0, 0, 0, 1, 2, 0] },
+    ],
+  },
+  Dsus4: {
+    name: 'Dsus4',
+    voicings: [
+      { name: 'Dsus4', style: 'open', frets: [-1, -1, 0, 2, 3, 3], fingers: [0, 0, 0, 1, 2, 3] },
     ],
   },
   E: {
@@ -72,6 +85,39 @@ export const CHORD_DATABASE: Record<string, ChordData> = {
       { name: 'B (barre)', style: 'barre', frets: [-1, 2, 4, 4, 4, 2], fingers: [0, 1, 2, 3, 4, 1], barreString: 2 },
       { name: 'B (easy)', style: 'easy', frets: [-1, 2, 4, 4, 4, -1], fingers: [0, 1, 2, 3, 4, 0] },
       { name: 'B (power)', style: 'power', frets: [-1, 2, 4, 4, -1, -1], fingers: [0, 1, 3, 4, 0, 0] },
+    ],
+  },
+  'F#': {
+    name: 'F#',
+    voicings: [
+      { name: 'F# (barre)', style: 'barre', frets: [2, 4, 4, 3, 2, 2], fingers: [1, 3, 4, 2, 1, 1], barreString: 2 },
+      { name: 'F# (easy)', style: 'easy', frets: [-1, -1, 4, 3, 2, 2], fingers: [0, 0, 3, 2, 1, 1] },
+      { name: 'F# (power)', style: 'power', frets: [2, 4, 4, -1, -1, -1], fingers: [1, 3, 4, 0, 0, 0] },
+    ],
+  },
+  'C#': {
+    name: 'C#',
+    voicings: [
+      { name: 'C# (barre)', style: 'barre', frets: [-1, 4, 6, 6, 6, 4], fingers: [0, 1, 2, 3, 4, 1], barreString: 4, baseFret: 4 },
+      { name: 'C# (easy)', style: 'easy', frets: [-1, 4, 6, 6, 6, -1], fingers: [0, 1, 2, 3, 4, 0], baseFret: 4 },
+    ],
+  },
+  'G#': {
+    name: 'G#',
+    voicings: [
+      { name: 'G# (barre)', style: 'barre', frets: [4, 6, 6, 5, 4, 4], fingers: [1, 3, 4, 2, 1, 1], barreString: 4, baseFret: 4 },
+    ],
+  },
+  'A#': {
+    name: 'A#',
+    voicings: [
+      { name: 'A# (barre)', style: 'barre', frets: [-1, 1, 3, 3, 3, 1], fingers: [0, 1, 2, 3, 4, 1], barreString: 1 },
+    ],
+  },
+  'D#': {
+    name: 'D#',
+    voicings: [
+      { name: 'D# (barre)', style: 'barre', frets: [-1, 6, 8, 8, 8, 6], fingers: [0, 1, 2, 3, 4, 1], barreString: 6, baseFret: 6 },
     ],
   },
 
@@ -199,6 +245,46 @@ export const CHORD_DATABASE: Record<string, ChordData> = {
     name: 'G7',
     voicings: [
       { name: 'G7', style: 'open', frets: [3, 2, 0, 0, 0, 1], fingers: [3, 2, 0, 0, 0, 1] },
+      { name: 'G7 (easy)', style: 'easy', frets: [1, 0, 0, 0, 0, 1], fingers: [1, 0, 0, 0, 0, 2] },
+    ],
+  },
+  'F#7': {
+    name: 'F#7',
+    voicings: [
+      { name: 'F#7 (barre)', style: 'barre', frets: [2, 4, 2, 3, 2, 2], fingers: [1, 3, 1, 2, 1, 1], barreString: 2 },
+      { name: 'F#7 (easy)', style: 'easy', frets: [-1, -1, 4, 3, 2, 0], fingers: [0, 0, 4, 3, 2, 0] },
+    ],
+  },
+
+  // Sus chords (common in country)
+  Asus2: {
+    name: 'Asus2',
+    voicings: [
+      { name: 'Asus2', style: 'open', frets: [-1, 0, 2, 2, 0, 0], fingers: [0, 0, 1, 2, 0, 0] },
+    ],
+  },
+  Asus4: {
+    name: 'Asus4',
+    voicings: [
+      { name: 'Asus4', style: 'open', frets: [-1, 0, 2, 2, 3, 0], fingers: [0, 0, 1, 2, 3, 0] },
+    ],
+  },
+  Esus4: {
+    name: 'Esus4',
+    voicings: [
+      { name: 'Esus4', style: 'open', frets: [0, 2, 2, 2, 0, 0], fingers: [0, 2, 3, 4, 0, 0] },
+    ],
+  },
+  Gsus4: {
+    name: 'Gsus4',
+    voicings: [
+      { name: 'Gsus4', style: 'open', frets: [3, 3, 0, 0, 1, 3], fingers: [2, 3, 0, 0, 1, 4] },
+    ],
+  },
+  Csus4: {
+    name: 'Csus4',
+    voicings: [
+      { name: 'Csus4', style: 'open', frets: [-1, 3, 3, 0, 1, 1], fingers: [0, 3, 4, 0, 1, 1] },
     ],
   },
 
