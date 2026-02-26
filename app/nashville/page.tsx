@@ -6,18 +6,11 @@ import { KEY_ORDER, chordsToNumbers, numbersToChords } from '@/lib/nashville'
 export default function NashvillePage() {
   const [key, setKey] = useState('G')
   const [chordInput, setChordInput] = useState('G C D Em')
-  const [numberInput, setNumberInput] = useState('1 4 5 6m')
-  const [chordResult, setChordResult] = useState('')
   const [numberResult, setNumberResult] = useState('')
 
   function handleChordsToNumbers(e: React.FormEvent) {
     e.preventDefault()
     setNumberResult(chordsToNumbers(chordInput, key))
-  }
-
-  function handleNumbersToChords(e: React.FormEvent) {
-    e.preventDefault()
-    setChordResult(numbersToChords(numberInput, key))
   }
 
   return (
@@ -29,66 +22,7 @@ export default function NashvillePage() {
         </p>
       </div>
 
-      {/* Main converter + scale reference - combined at top */}
-      <section className="mt-10 rounded-lg bg-void-card border border-barn/40 p-6">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-          <h2 className="font-display font-medium text-cream text-xl">Quick Reference</h2>
-          <div className="flex items-center gap-2">
-            <label className="text-sm text-cream-muted">Key:</label>
-            <select
-              value={key}
-              onChange={(e) => setKey(e.target.value)}
-              className="rounded border border-barn/50 bg-void px-3 py-1.5 text-cream text-sm"
-            >
-              {KEY_ORDER.map((k) => (
-                <option key={k} value={k}>{k}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {/* Scale degrees grid */}
-        <div className="grid grid-cols-7 gap-2 text-center mb-6">
-          {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num) => {
-            const chord = numbersToChords(num, key).trim()
-            return (
-              <div key={num} className="bg-void rounded-lg p-3 border border-barn/20">
-                <div className="text-lg font-medium text-cream">{chord}</div>
-                <div className="text-xs text-cream-muted mt-1">{num}</div>
-              </div>
-            )
-          })}
-        </div>
-
-        {/* Numbers to chords converter */}
-        <div className="border-t border-barn/20 pt-5">
-          <form onSubmit={handleNumbersToChords} className="flex flex-col sm:flex-row gap-3">
-            <div className="flex-1">
-              <input
-                type="text"
-                value={numberInput}
-                onChange={(e) => setNumberInput(e.target.value)}
-                placeholder="Enter numbers (e.g. 1 4 5 6m)"
-                className="w-full rounded border border-barn/50 bg-void px-4 py-2.5 text-cream placeholder-cream-muted"
-              />
-            </div>
-            <button type="submit" className="rounded bg-barn px-5 py-2.5 text-cream font-medium hover:bg-barn-hover whitespace-nowrap">
-              Get Chords
-            </button>
-          </form>
-          {chordResult && (
-            <p className="mt-3 font-mono text-lg text-cream">
-              → <strong className="text-gold">{chordResult}</strong>
-            </p>
-          )}
-        </div>
-
-        <p className="mt-4 text-xs text-cream-muted text-center">
-          Major: 1, 4, 5 · Minor: 2m, 3m, 6m · Diminished: 7dim
-        </p>
-      </section>
-
-      {/* How it works */}
+      {/* How it works - first */}
       <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
         <h2 className="font-display font-medium text-cream">How it works</h2>
         <p className="mt-2 text-sm text-cream-muted">
@@ -100,8 +34,41 @@ export default function NashvillePage() {
         </p>
       </section>
 
+      {/* Quick Reference */}
+      <section className="mt-8 rounded-lg bg-void-card border border-barn/40 p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+          <h2 className="font-display font-medium text-cream text-xl">Quick Reference</h2>
+          <select
+            value={key}
+            onChange={(e) => setKey(e.target.value)}
+            className="rounded-lg border-2 border-barn bg-void px-4 py-2 text-cream text-lg font-medium min-w-[100px]"
+          >
+            {KEY_ORDER.map((k) => (
+              <option key={k} value={k}>Key of {k}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Scale degrees grid */}
+        <div className="grid grid-cols-7 gap-2 text-center">
+          {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num) => {
+            const chord = numbersToChords(num, key).trim()
+            return (
+              <div key={num} className="bg-void rounded-lg p-3 border border-barn/20">
+                <div className="text-lg font-medium text-cream">{chord}</div>
+                <div className="text-xs text-cream-muted mt-1">{num}</div>
+              </div>
+            )
+          })}
+        </div>
+
+        <p className="mt-4 text-xs text-cream-muted text-center">
+          Major: 1, 4, 5 · Minor: 2m, 3m, 6m · Diminished: 7dim
+        </p>
+      </section>
+
       {/* Chords to numbers converter */}
-      <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
+      <section className="mt-8 rounded-lg bg-void-card border border-saddle/50 p-6">
         <h2 className="font-display font-medium text-cream">Chords → Numbers</h2>
         <p className="mt-1 text-sm text-cream-muted">
           Enter chord names to see their Nashville numbers in the selected key.
