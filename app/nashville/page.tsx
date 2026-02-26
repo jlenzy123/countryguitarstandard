@@ -119,20 +119,21 @@ export default function NashvillePage() {
       </section>
 
       <section className="mt-10 rounded-lg bg-void-card border border-denim/40 p-6">
-        <h2 className="font-display font-medium text-cream">Reference: scale degrees in {key}</h2>
-        <p className="mt-2 text-sm text-cream-muted">
-          1 = I, 2m = ii, 3m = iii, 4 = IV, 5 = V, 6m = vi, 7dim = vii°
-        </p>
-        <ul className="mt-2 flex flex-wrap gap-3 font-mono text-cream">
-          {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num, i) => {
+        <h2 className="font-display font-medium text-cream mb-4">Scale degrees in {key}</h2>
+        <div className="grid grid-cols-7 gap-2 text-center">
+          {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num) => {
             const chord = numbersToChords(num, key).trim()
             return (
-              <li key={num}>
-                <span className="text-cream-muted">{num}</span> → {chord}
-              </li>
+              <div key={num} className="bg-void rounded-lg p-3 border border-barn/20">
+                <div className="text-lg font-medium text-cream">{chord}</div>
+                <div className="text-xs text-cream-muted mt-1">{num}</div>
+              </div>
             )
           })}
-        </ul>
+        </div>
+        <p className="mt-4 text-xs text-cream-muted text-center">
+          Major chords: 1, 4, 5 · Minor chords: 2m, 3m, 6m · Diminished: 7dim
+        </p>
       </section>
 
       <p className="mt-10 text-sm text-cream-muted">
