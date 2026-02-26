@@ -1,17 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { KEY_ORDER, chordsToNumbers, numbersToChords } from '@/lib/nashville'
+import { KEY_ORDER, numbersToChords } from '@/lib/nashville'
 
 export default function NashvillePage() {
   const [key, setKey] = useState('G')
-  const [chordInput, setChordInput] = useState('G C D Em')
-  const [numberResult, setNumberResult] = useState('')
-
-  function handleChordsToNumbers(e: React.FormEvent) {
-    e.preventDefault()
-    setNumberResult(chordsToNumbers(chordInput, key))
-  }
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
@@ -67,36 +60,11 @@ export default function NashvillePage() {
         </p>
       </section>
 
-      {/* Chords to numbers converter */}
-      <section className="mt-8 rounded-lg bg-void-card border border-saddle/50 p-6">
-        <h2 className="font-display font-medium text-cream">Chords → Numbers</h2>
-        <p className="mt-1 text-sm text-cream-muted">
-          Enter chord names to see their Nashville numbers in the selected key.
-        </p>
-        <form onSubmit={handleChordsToNumbers} className="mt-4 flex flex-col sm:flex-row gap-3">
-          <div className="flex-1">
-            <input
-              type="text"
-              value={chordInput}
-              onChange={(e) => setChordInput(e.target.value)}
-              placeholder="Enter chords (e.g. G C D Em)"
-              className="w-full rounded border border-saddle/50 bg-void px-4 py-2.5 text-cream placeholder-cream-muted"
-            />
-          </div>
-          <button type="submit" className="rounded bg-barn px-5 py-2.5 text-cream font-medium hover:bg-barn-hover whitespace-nowrap">
-            Get Numbers
-          </button>
-        </form>
-        {numberResult && (
-          <p className="mt-3 font-mono text-lg text-cream">
-            → <strong className="text-gold">{numberResult}</strong>
-          </p>
-        )}
-      </section>
-
       <p className="mt-10 text-sm text-cream-muted">
         <a href="/" className="text-gold hover:underline">Back to home</a>
       </p>
     </div>
+  )
+}
   )
 }
