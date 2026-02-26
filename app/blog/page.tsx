@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import NewsletterSignup from '../components/NewsletterSignup'
 
 const POSTS = [
   {
@@ -67,6 +68,10 @@ export default function BlogPage() {
       <p className="mt-10 sm:mt-12 text-xs sm:text-sm text-cream-muted">
         <a href="/" className="text-gold hover:underline">Back to home</a>
       </p>
+
+      <div className="mt-10 sm:mt-14">
+        <NewsletterSignup />
+      </div>
     </div>
   )
 }

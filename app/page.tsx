@@ -1,3 +1,5 @@
+import NewsletterSignup from './components/NewsletterSignup'
+
 export default function Home() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:py-16">
@@ -8,6 +10,11 @@ export default function Home() {
         Free and premium guides, charts, and industry reports that teach you how to write better country
         songs, navigate Nashville numbers, and play authentic progressions on acoustic or electric guitar.
       </p>
+
+      {/* Newsletter Signup */}
+      <div className="mt-8 sm:mt-10">
+        <NewsletterSignup />
+      </div>
 
       <div className="mt-10 sm:mt-14 prose prose-invert max-w-none">
         <h2 className="text-lg sm:text-xl">What you'll find here</h2>

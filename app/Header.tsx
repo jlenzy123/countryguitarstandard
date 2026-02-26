@@ -41,7 +41,10 @@ export default function Header() {
             Blog
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-barn group-hover:w-full transition-all duration-300" />
           </a>
-        </div>
+          <a href="/contact" className="hover:text-cream transition-colors duration-300 relative group">
+            Contact
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-barn group-hover:w-full transition-all duration-300" />
+          </a>
 
         {/* Mobile Hamburger Button */}
         <button
@@ -76,6 +79,9 @@ export default function Header() {
             </a>
             <a href="/blog" className="text-cream hover:text-gold transition-colors py-2" onClick={() => setMenuOpen(false)}>
               Blog
+            </a>
+            <a href="/contact" className="text-cream hover:text-gold transition-colors py-2" onClick={() => setMenuOpen(false)}>
+              Contact
             </a>
           </div>
         </div>
