@@ -49,9 +49,30 @@ body {
 select {
   background-color: var(--card);
   color: var(--offwhite);
+  min-height: 44px;
+  font-size: 16px;
 }
 
 select option {
   background-color: var(--card);
   color: var(--offwhite);
+}
+
+/* Mobile improvements */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Ensure touch targets are at least 44px */
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Improve readability on small screens */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+  }
 }

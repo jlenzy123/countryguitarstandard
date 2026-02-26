@@ -29,19 +29,19 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound()
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-12">
-      <p className="text-sm text-cream-muted">
+    <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12">
+      <p className="text-xs sm:text-sm text-cream-muted">
         <Link href="/blog" className="text-gold hover:underline">Blog</Link>
         <span className="mx-2">/</span>
         <span>{formatDate(post.date)}</span>
       </p>
-      <h1 className="mt-2 font-display text-3xl font-bold text-cream border-b-2 border-saddle pb-2">
+      <h1 className="mt-2 font-display text-2xl sm:text-3xl font-bold text-cream border-b-2 border-saddle pb-2">
         {post.title}
       </h1>
-      <div className="mt-8 text-cream-muted">
+      <div className="mt-6 sm:mt-8 text-xs sm:text-sm text-cream-muted leading-relaxed">
         <p>{post.body}</p>
       </div>
-      <p className="mt-10 text-sm text-cream-muted">
+      <p className="mt-8 sm:mt-10 text-xs sm:text-sm text-cream-muted">
         <Link href="/blog" className="text-gold hover:underline">Back to blog</Link>
         <span className="mx-2">·</span>
         <Link href="/" className="text-gold hover:underline">Home</Link>

@@ -25,10 +25,11 @@ export default function RootLayout({
           boxShadow: '0 0 30px rgba(198, 40, 40, 0.2), inset 0 1px 0 rgba(198, 40, 40, 0.1)'
         }}>
           <nav className="mx-auto max-w-4xl px-4 py-4 flex items-center justify-between">
-            <a href="/" className="font-display text-lg font-semibold text-cream hover:text-barn transition-colors duration-300">
-              Country Guitar Standard
+            <a href="/" className="font-display text-sm sm:text-lg font-semibold text-cream hover:text-barn transition-colors duration-300 flex-shrink-0">
+              <span className="hidden sm:inline">Country Guitar Standard</span>
+              <span className="sm:hidden">CGS</span>
             </a>
-            <div className="flex gap-8 text-sm text-cream-muted">
+            <div className="hidden md:flex gap-6 lg:gap-8 text-sm text-cream-muted">
               <a href="/guides" className="hover:text-cream transition-colors duration-300 relative group">
                 Guides
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-barn group-hover:w-full transition-all duration-300" />
@@ -53,6 +54,11 @@ export default function RootLayout({
                 Blog
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-barn group-hover:w-full transition-all duration-300" />
               </a>
+            </div>
+            <div className="md:hidden flex gap-4 text-sm text-cream-muted">
+              <a href="/guides" className="hover:text-cream transition-colors">Guides</a>
+              <a href="/chord-tool" className="hover:text-cream transition-colors">Tools</a>
+              <a href="/blog" className="hover:text-cream transition-colors">Blog</a>
             </div>
           </nav>
           <div className="palette-stripe" />
