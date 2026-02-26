@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+        sans: ['Resolve Sans', 'system-ui', 'sans-serif'],
+        display: ['Resolve Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
         void: {

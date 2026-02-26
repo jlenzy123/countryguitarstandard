@@ -1,13 +1,6 @@
 import type { Metadata } from 'next'
-import { Outfit } from 'next/font/google'
 import NavigationHeader from './Header'
 import './globals.css'
-
-const outfit = Outfit({
-  variable: '--font-outfit',
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Country Guitar Standard',
@@ -29,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={outfit.variable}>
+    <html lang="en">
       <body className="min-h-screen font-sans antialiased bg-void text-cream">
         <NavigationHeader />
         <main>{children}</main>
