@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #050506;
+  --surface: #101013;
+  --card: #16161b;
+  --offwhite: #f9f7f4;
+  --offwhite-muted: #c0bab2;
+  --brand-red: #c62828;
+  --brand-red-soft: #8e0000;
+}
+
+body {
+  background: var(--bg);
+  color: var(--offwhite);
+}
+
+/* Single-brand stripe in red with modern glow */
+.palette-stripe {
+  height: 3px;
+  width: 100%;
+  background: var(--brand-red);
+  box-shadow: 0 0 20px rgba(198, 40, 40, 0.8), 0 0 40px rgba(198, 40, 40, 0.4);
+}
+
+/* Global panel styling for all dark "boxes" with modern glow */
+.bg-void-card {
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(198, 40, 40, 0.6);
+  box-shadow:
+    0 0 0 1px rgba(198, 40, 40, 0.35),
+    0 0 20px rgba(198, 40, 40, 0.3),
+    0 18px 40px -22px rgba(0, 0, 0, 0.9);
+  transition: all 0.3s ease;
+}
+
+.bg-void-card:hover {
+  border-color: rgba(198, 40, 40, 0.8);
+  box-shadow:
+    0 0 0 1px rgba(198, 40, 40, 0.5),
+    0 0 30px rgba(198, 40, 40, 0.5),
+    0 18px 40px -22px rgba(0, 0, 0, 0.9);
+}
+
+/* Make selects readable on dark background (including dropdown options) */
+select {
+  background-color: var(--card);
+  color: var(--offwhite);
+}
+
+select option {
+  background-color: var(--card);
+  color: var(--offwhite);
+}
