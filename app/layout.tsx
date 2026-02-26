@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import NavigationHeader from './Header'
 import './globals.css'
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: 'Country Guitar Standard',
@@ -23,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen font-sans antialiased bg-void text-cream">
+      <body className={`${inter.variable} min-h-screen font-sans antialiased bg-void text-cream`}>
         <NavigationHeader />
         <main>{children}</main>
         <div className="palette-stripe mt-16" />
