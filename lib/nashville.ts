@@ -116,6 +116,7 @@ export function suggestNextChords(chordNames: string[], key: string): string[] {
     [0],              // 7 (vii°)
   ]
   const nextDegrees = followUps[lastIndex] ?? [0, 4, 5]
-  const suggested = [...new Set(nextDegrees)].map((d) => chords[d]).filter(Boolean)
+  const uniqueDegrees = Array.from(new Set(nextDegrees))
+  const suggested = uniqueDegrees.map((d) => chords[d]).filter(Boolean)
   return suggested.slice(0, 6)
 }
