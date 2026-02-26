@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import Link from 'next/link'
 import { PROGRESSIONS, KEY_ORDER } from './progressions'
 import { suggestNextChords } from '@/lib/nashville'
 
@@ -38,7 +39,17 @@ export default function ChordToolPage() {
           Browse progressions in every key or enter chords you’re playing and get suggestions for what comes next.
         </p>
       </div>
-
+      {/* Link to chord diagrams */}
+      <Link
+        href="/chord-diagrams"
+        className="mt-6 inline-flex items-center gap-2 rounded-lg bg-denim/40 px-4 py-3 text-cream hover:bg-denim/60 transition border border-denim/60"
+      >
+        <span className="text-2xl">🎸</span>
+        <div>
+          <span className="font-medium">See Chord Diagrams</span>
+          <p className="text-sm text-cream-muted">Interactive fingering charts with easy/barre options</p>
+        </div>
+      </Link>
       {/* Continue this progression */}
       <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
         <h2 className="font-display font-semibold text-cream">Continue this progression</h2>
