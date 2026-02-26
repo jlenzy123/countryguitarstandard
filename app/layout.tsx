@@ -12,6 +12,15 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: 'Country Guitar Standard',
   description: 'Country guitar and songwriting insights: song guides, industry reports, templates, and progression tools. Professional, readable typography.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
+  openGraph: {
+    title: 'Country Guitar Standard',
+    description: 'Country guitar and songwriting insights: song guides, industry reports, templates, and progression tools.',
+    images: ['/favicon.png'],
+  },
 }
 
 export default function RootLayout({
