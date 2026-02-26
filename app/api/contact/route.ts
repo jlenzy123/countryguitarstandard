@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
 
     // Send email to owner
     const ownerResult = await resend.emails.send({
-      from: 'Country Guitar Standard <noreply@countryguitarstandard.com>',
+      from: 'Country Guitar Standard <onboarding@resend.dev>',
       to: OWNER_EMAIL,
       subject: `New Contact: ${subject}`,
       html: `
@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
 
     // Send confirmation email to user
     const userResult = await resend.emails.send({
-      from: 'Country Guitar Standard <noreply@countryguitarstandard.com>',
+      from: 'Country Guitar Standard <onboarding@resend.dev>',
       to: email,
       subject: 'We received your message',
       html: `

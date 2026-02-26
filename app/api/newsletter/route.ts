@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     // Send confirmation email via Resend
     const result = await resend.emails.send({
-      from: 'Country Guitar Standard <noreply@countryguitarstandard.com>',
+      from: 'Country Guitar Standard <onboarding@resend.dev>',
       to: email,
       subject: 'Welcome to Country Guitar Standard',
       html: `
