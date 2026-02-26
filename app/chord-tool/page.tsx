@@ -39,17 +39,18 @@ export default function ChordToolPage() {
           Browse progressions in every key or enter chords you’re playing and get suggestions for what comes next.
         </p>
       </div>
+
       {/* Link to chord diagrams */}
       <Link
         href="/chord-diagrams"
-        className="mt-6 inline-flex items-center gap-2 rounded-lg bg-denim/40 px-4 py-3 text-cream hover:bg-denim/60 transition border border-denim/60"
+        className="mt-8 flex items-center justify-between w-full rounded-lg bg-barn px-6 py-4 text-cream hover:bg-barn-hover transition border-2 border-gold/50 shadow-lg"
       >
-        <span className="text-2xl">🎸</span>
         <div>
-          <span className="font-medium">See Chord Diagrams</span>
-          <p className="text-sm text-cream-muted">Interactive fingering charts with easy/barre options</p>
+          <span className="font-display text-xl font-bold">See Chord Diagrams →</span>
+          <p className="text-sm text-cream/80 mt-1">Interactive fingering charts with easy, barre, and power chord options</p>
         </div>
       </Link>
+
       {/* Continue this progression */}
       <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
         <h2 className="font-display font-semibold text-cream">Continue this progression</h2>
