@@ -27,10 +27,9 @@ export default function RootLayout({
         <NavigationHeader />
         <main>{children}</main>
         <div className="palette-stripe mt-16" />
-        <footer className="bg-void border-t border-barn/60 py-8 text-center text-sm text-cream-muted font-sans" style={{
-          boxShadow: '0 0 30px rgba(198, 40, 40, 0.2), inset 0 -1px 0 rgba(198, 40, 40, 0.1)'
-        }}>
-          Country Guitar Standard — Templates, tabs, and tools for singers and writers.
+        <footer className="bg-void-elevated border-t border-white/10 py-10 text-center text-sm text-cream-muted font-sans">
+          <p>Country Guitar Standard</p>
+          <p className="mt-1 text-xs">Templates, tabs, and tools for singers and writers.</p>
         </footer>
       </body>
     </html>

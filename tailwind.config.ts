@@ -14,34 +14,34 @@ const config: Config = {
       },
       colors: {
         void: {
-          DEFAULT: '#050506',
-          elevated: '#101013',
-          card: '#16161b',
+          DEFAULT: '#0a0a0a',
+          elevated: '#141414',
+          card: '#1a1a1a',
         },
         cream: {
-          DEFAULT: '#f9f7f4',
-          muted: '#c0bab2',
+          DEFAULT: '#ffffff',
+          muted: '#a3a3a3',
         },
-        // Map all accent names into a single red/neutral brand palette
+        // Clean red accent palette
         denim: {
-          DEFAULT: '#c62828',
-          hover: '#e53935',
+          DEFAULT: '#dc2626',
+          hover: '#ef4444',
         },
         saddle: {
-          DEFAULT: '#8e0000',
-          hover: '#b71c1c',
+          DEFAULT: '#7f1d1d',
+          hover: '#991b1b',
         },
         barn: {
-          DEFAULT: '#c62828',
-          hover: '#8e0000',
+          DEFAULT: '#dc2626',
+          hover: '#b91c1c',
         },
         gold: {
-          DEFAULT: '#f9f7f4',
-          hover: '#ffffff',
+          DEFAULT: '#fbbf24',
+          hover: '#fcd34d',
         },
         teal: {
-          DEFAULT: '#c62828',
-          hover: '#e53935',
+          DEFAULT: '#dc2626',
+          hover: '#ef4444',
         },
       },
     },

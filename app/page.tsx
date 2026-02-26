@@ -29,43 +29,43 @@ export default function Home() {
       <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <a
           href="/guides"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-denim"
+          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
         >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Guides & Reports</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Guides & Reports</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Song breakdowns, artist deep dives, and industry analysis. Some free, some premium.
           </p>
         </a>
         <a
           href="/songwriting"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-saddle"
+          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
         >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Songwriting Template</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Songwriting Template</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Structure your ideas: verses, chorus, bridge. Free download.
           </p>
         </a>
         <a
           href="/shop"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-gold"
+          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
         >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Shop Products</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Shop Products</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Paid song guides, album PDFs, and reports available now.
           </p>
         </a>
         <a
           href="/chord-tool"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-barn"
+          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
         >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Chord Tool</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Chord Tool</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Browse progressions in any key or get suggestions based on chords you're playing.
           </p>
         </a>
       </div>
 
-      <div className="mt-12 sm:mt-16 rounded-lg bg-denim/20 border border-denim/50 p-4 sm:p-8 text-center">
+      <div className="mt-12 sm:mt-16 rounded-lg bg-barn/10 border border-barn/30 p-4 sm:p-8 text-center">
         <p className="text-sm sm:text-base text-cream">
           Start with a <strong className="text-gold">song guide</strong>, try the
           <strong className="text-gold"> chord tool</strong> for progressions, or
