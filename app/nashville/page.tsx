@@ -23,14 +23,14 @@ export default function NashvillePage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
       <div className="border-l-4 border-barn pl-4">
-        <h1 className="font-display text-3xl font-semibold text-cream">Nashville Number System</h1>
+        <h1 className="font-display text-3xl font-medium text-cream">Nashville Number System</h1>
         <p className="mt-2 text-cream-muted">
           Convert between chord names and numbers in any key. Learn how charts work.
         </p>
       </div>
 
       <section className="mt-10 rounded-lg bg-void-card border border-barn/40 p-6">
-        <h2 className="font-display font-semibold text-cream">How it works</h2>
+        <h2 className="font-display font-medium text-cream">How it works</h2>
         <p className="mt-2 text-sm text-cream-muted">
           In any key, the scale degrees are numbered 1–7. The 1 chord is the tonic (e.g. G in G major),
           4 is the subdominant (C), 5 is the dominant (D). Lowercase “m” means minor (e.g. 6m = Em in G).
@@ -41,7 +41,7 @@ export default function NashvillePage() {
       </section>
 
       <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
-        <h2 className="font-display font-semibold text-cream">Chords → Numbers</h2>
+        <h2 className="font-display font-medium text-cream">Chords → Numbers</h2>
         <p className="mt-1 text-sm text-cream-muted">
           Enter chord names (e.g. G C D Em). Key sets the scale.
         </p>
@@ -80,7 +80,7 @@ export default function NashvillePage() {
       </section>
 
       <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
-        <h2 className="font-display font-semibold text-cream">Numbers → Chords</h2>
+        <h2 className="font-display font-medium text-cream">Numbers → Chords</h2>
         <p className="mt-1 text-sm text-cream-muted">
           Enter Nashville numbers (e.g. 1 4 5 6m 4 5 1). Key sets the scale.
         </p>
@@ -119,7 +119,7 @@ export default function NashvillePage() {
       </section>
 
       <section className="mt-10 rounded-lg bg-void-card border border-denim/40 p-6">
-        <h2 className="font-display font-semibold text-cream">Reference: scale degrees in {key}</h2>
+        <h2 className="font-display font-medium text-cream">Reference: scale degrees in {key}</h2>
         <p className="mt-2 text-sm text-cream-muted">
           1 = I, 2m = ii, 3m = iii, 4 = IV, 5 = V, 6m = vi, 7dim = vii°
         </p>

@@ -15,7 +15,7 @@ export default function ShopPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <div className="border-l-4 border-saddle pl-4">
-        <h1 className="font-display text-3xl font-semibold text-cream">Shop</h1>
+        <h1 className="font-display text-3xl font-medium text-cream">Shop</h1>
         <p className="mt-2 text-cream-muted">
           Everything currently available: song guides, artist deep dives, industry reports, and more.
         </p>
@@ -28,7 +28,7 @@ export default function ShopPage() {
             className={`flex flex-col gap-4 rounded-lg bg-void-card border-l-4 ${ACCENT_BORDERS[i % 5]} p-6 sm:flex-row sm:items-center`}
           >
             <div className="min-w-0 flex-1">
-              <h2 className="font-display font-semibold text-cream">{guide.title}</h2>
+              <h2 className="font-display font-medium text-cream">{guide.title}</h2>
               <p className="text-sm text-gold">{getGuideTypeLabel(guide.type as any)}</p>
               <p className="mt-2 text-sm text-cream-muted">{guide.excerpt}</p>
             </div>

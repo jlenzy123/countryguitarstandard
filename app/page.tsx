@@ -3,7 +3,7 @@ import NewsletterSignup from './components/NewsletterSignup'
 export default function Home() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:py-16">
-      <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-cream tracking-tight">
+      <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium text-cream tracking-tight">
         Country guitar<br className="sm:hidden" /> songwriting<br className="hidden sm:block" /> resources<br />for writers and players.
       </h1>
       <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-cream-muted leading-relaxed">

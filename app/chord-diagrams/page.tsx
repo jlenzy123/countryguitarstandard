@@ -49,7 +49,7 @@ export default function ChordDiagramsPage() {
     <div className="mx-auto max-w-5xl px-4 py-12">
       {/* Header */}
       <div className="border-l-4 border-barn pl-4">
-        <h1 className="font-display text-2xl sm:text-3xl font-semibold text-cream">
+        <h1 className="font-display text-2xl sm:text-3xl font-medium text-cream">
           Interactive Chord Diagrams
         </h1>
         <p className="mt-2 text-cream-muted text-sm sm:text-base leading-relaxed">
@@ -169,7 +169,7 @@ export default function ChordDiagramsPage() {
 
       {/* Current progression display */}
       <section className="mt-8">
-        <h2 className="font-display font-semibold text-cream mb-2">
+        <h2 className="font-display font-medium text-cream mb-2">
           Playing: <span className="text-gold">{selectedProgression.join(' → ')}</span>
         </h2>
         <p className="text-sm text-cream-muted mb-6">
@@ -195,7 +195,7 @@ export default function ChordDiagramsPage() {
                   key={chordName}
                   className="flex flex-col items-center justify-center p-4 rounded-lg bg-void-card border border-saddle/30 min-h-[150px]"
                 >
-                  <span className="font-display font-semibold text-cream text-lg">{chordName}</span>
+                  <span className="font-display font-medium text-cream text-lg">{chordName}</span>
                   <span className="text-xs text-cream-muted mt-2">Coming soon</span>
                 </div>
               )
@@ -219,7 +219,7 @@ export default function ChordDiagramsPage() {
 
       {/* Legend */}
       <section className="mt-12 rounded-lg bg-void-card border border-saddle/50 p-4 sm:p-6">
-        <h3 className="font-display font-semibold text-cream mb-3">How to Read</h3>
+        <h3 className="font-display font-medium text-cream mb-3">How to Read</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-cream-muted">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 rounded-full bg-barn flex items-center justify-center text-white text-xs font-bold">
@@ -246,7 +246,7 @@ export default function ChordDiagramsPage() {
 
       {/* Tips */}
       <section className="mt-8 rounded-lg bg-denim/20 border border-denim/40 p-4 sm:p-6">
-        <h3 className="font-display font-semibold text-cream mb-3">Tips</h3>
+        <h3 className="font-display font-medium text-cream mb-3">Tips</h3>
         <ul className="space-y-2 text-sm text-cream-muted">
           <li>• <strong className="text-cream">Easy voicings</strong> — Fewer fingers, great for beginners or quick changes</li>
           <li>• <strong className="text-cream">Open voicings</strong> — Full sound using open strings (keys of C, G, D, A, E)</li>

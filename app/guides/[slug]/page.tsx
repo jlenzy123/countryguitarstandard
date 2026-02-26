@@ -39,7 +39,7 @@ export default function GuidePage({ params }: GuidePageProps) {
           </span>
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-semibold mb-4">{guide.title}</h1>
+        <h1 className="text-4xl md:text-5xl font-medium mb-4">{guide.title}</h1>
 
         <div className="flex flex-wrap gap-6 text-sm text-offwhite/60">
           <div>
@@ -65,14 +65,14 @@ export default function GuidePage({ params }: GuidePageProps) {
                   // Handle headings
                   if (paragraph.startsWith('# ')) {
                     return (
-                      <h2 key={idx} className="text-3xl font-semibold mt-8 mb-4 text-barn">
+                      <h2 key={idx} className="text-3xl font-medium mt-8 mb-4 text-barn">
                         {paragraph.replace('# ', '')}
                       </h2>
                     );
                   }
                   if (paragraph.startsWith('## ')) {
                     return (
-                      <h3 key={idx} className="text-2xl font-semibold mt-6 mb-3 text-barn">
+                      <h3 key={idx} className="text-2xl font-medium mt-6 mb-3 text-barn">
                         {paragraph.replace('## ', '')}
                       </h3>
                     );

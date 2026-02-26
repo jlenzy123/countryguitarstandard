@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12">
       <div className="border-l-4 border-barn pl-3 sm:pl-4">
-        <h1 className="font-display text-2xl sm:text-3xl font-semibold text-cream">Get in touch</h1>
+        <h1 className="font-display text-2xl sm:text-3xl font-medium text-cream">Get in touch</h1>
         <p className="mt-1 sm:mt-2 text-sm sm:text-base text-cream-muted">
           Have questions, feedback, or want to collaborate? I'd love to hear from you.
         </p>
@@ -20,7 +20,7 @@ export default function ContactPage() {
       </div>
 
       <div className="mt-12 sm:mt-16 space-y-4">
-        <h2 className="font-display text-lg font-semibold text-cream">Other ways to reach me</h2>
+        <h2 className="font-display text-lg font-medium text-cream">Other ways to reach me</h2>
         <ul className="text-sm text-cream-muted space-y-2">
           <li>
             <strong className="text-cream">Email:</strong> check the footer for contact

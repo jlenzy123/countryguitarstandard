@@ -24,7 +24,7 @@ export default function GuidesPage() {
       {/* Header */}
       <div className="max-w-4xl mx-auto px-6 mb-16">
         <div className="palette-stripe mb-8" />
-        <h1 className="text-5xl font-semibold mb-4">Guides & Reports</h1>
+        <h1 className="text-5xl font-medium mb-4">Guides & Reports</h1>
         <p className="text-lg text-offwhite/80 max-w-2xl">
           Deep-dive analyses of songs, artists, and the music industry. Learn the techniques, patterns, and strategies behind today's biggest hits.
         </p>
