@@ -45,6 +45,7 @@ export default function NavigationHeader() {
             Contact
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-barn group-hover:w-full transition-all duration-300" />
           </a>
+        </div>
 
         {/* Mobile Hamburger Button */}
         <button
