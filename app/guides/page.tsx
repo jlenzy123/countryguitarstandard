@@ -24,7 +24,7 @@ export default function GuidesPage() {
       {/* Header */}
       <div className="max-w-4xl mx-auto px-6 mb-16">
         <div className="palette-stripe mb-8" />
-        <h1 className="text-5xl font-bold mb-4">Guides & Reports</h1>
+        <h1 className="text-5xl font-semibold mb-4">Guides & Reports</h1>
         <p className="text-lg text-offwhite/80 max-w-2xl">
           Deep-dive analyses of songs, artists, and the music industry. Learn the techniques, patterns, and strategies behind today's biggest hits.
         </p>
@@ -81,7 +81,7 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl font-bold mb-2 group-hover:text-barn transition-colors">
+                <h2 className="text-xl font-medium mb-2 group-hover:text-barn transition-colors">
                   {guide.title}
                 </h2>
 
@@ -109,7 +109,7 @@ export default function GuidesPage() {
 
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-6 mt-20 py-12 bg-void-card border border-barn/30 rounded-lg">
-        <h3 className="text-2xl font-bold mb-2">What's Coming</h3>
+        <h3 className="text-2xl font-medium mb-2">What's Coming</h3>
         <p className="text-offwhite/70 mb-4">
           Industry reports on country music trends, more artist deep-dives, and specialized songwriting techniques guides.
         </p>

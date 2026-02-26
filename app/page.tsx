@@ -3,10 +3,10 @@ import NewsletterSignup from './components/NewsletterSignup'
 export default function Home() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:py-16">
-      <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-cream tracking-tight">
+      <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-cream tracking-tight">
         Country guitar<br className="sm:hidden" /> songwriting<br className="hidden sm:block" /> resources<br />for writers and players.
       </h1>
-      <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-cream-muted">
+      <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-cream-muted leading-relaxed">
         Free and premium guides, charts, and industry reports that teach you how to write better country
         songs, navigate Nashville numbers, and play authentic progressions on acoustic or electric guitar.
       </p>
@@ -17,7 +17,7 @@ export default function Home() {
       </div>
 
       <div className="mt-10 sm:mt-14 prose prose-invert max-w-none">
-        <h2 className="text-lg sm:text-xl">What you'll find here</h2>
+        <h2 className="text-lg sm:text-xl font-medium">What you'll find here</h2>
         <ul className="list-disc ml-4 sm:ml-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
           <li>Step-by-step <a href="/guides" className="text-gold hover:underline">song guides</a> explaining chord progressions, Nashville numbers, and stylistic choices</li>
           <li>In-depth <a href="/guides" className="text-gold hover:underline">artist analysis and industry reports</a> covering the modern country landscape</li>
@@ -31,7 +31,7 @@ export default function Home() {
           href="/guides"
           className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-denim"
         >
-          <h2 className="font-display text-sm sm:text-base font-semibold text-cream group-hover:text-gold transition-colors">Guides & Reports</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Guides & Reports</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Song breakdowns, artist deep dives, and industry analysis. Some free, some premium.
           </p>
@@ -40,7 +40,7 @@ export default function Home() {
           href="/songwriting"
           className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-saddle"
         >
-          <h2 className="font-display text-sm sm:text-base font-semibold text-cream group-hover:text-gold transition-colors">Songwriting Template</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Songwriting Template</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Structure your ideas: verses, chorus, bridge. Free download.
           </p>
@@ -49,7 +49,7 @@ export default function Home() {
           href="/shop"
           className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-gold"
         >
-          <h2 className="font-display text-sm sm:text-base font-semibold text-cream group-hover:text-gold transition-colors">Shop Products</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Shop Products</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Paid song guides, album PDFs, and reports available now.
           </p>
@@ -58,7 +58,7 @@ export default function Home() {
           href="/chord-tool"
           className="group block rounded-lg bg-void-card p-4 sm:p-6 transition hover:bg-void-card/90 border-l-4 border-barn"
         >
-          <h2 className="font-display text-sm sm:text-base font-semibold text-cream group-hover:text-gold transition-colors">Chord Tool</h2>
+          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-gold transition-colors">Chord Tool</h2>
           <p className="mt-2 text-xs sm:text-sm text-cream-muted">
             Browse progressions in any key or get suggestions based on chords you're playing.
           </p>
@@ -81,7 +81,7 @@ export default function Home() {
 
       {/* FAQ for SEO */}
       <section className="mt-16 sm:mt-24">
-        <h2 className="text-xl sm:text-2xl font-semibold text-cream mb-4 sm:mb-6">Frequently Asked Questions</h2>
+        <h2 className="text-xl sm:text-2xl font-medium text-cream mb-4 sm:mb-6">Frequently Asked Questions</h2>
         <div className="space-y-3 sm:space-y-4">
           <details className="group rounded-lg bg-void-card p-3 sm:p-4" open>
             <summary className="flex justify-between items-start sm:items-center cursor-pointer text-cream font-medium text-sm sm:text-base gap-2">

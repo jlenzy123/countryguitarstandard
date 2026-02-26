@@ -33,7 +33,7 @@ export default function BlogPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12">
       <div className="border-l-4 border-denim pl-3 sm:pl-4">
-        <h1 className="font-display text-2xl sm:text-3xl font-bold text-cream">Blog</h1>
+        <h1 className="font-display text-2xl sm:text-3xl font-semibold text-cream">Blog</h1>
         <p className="mt-1 sm:mt-2 text-sm sm:text-base text-cream-muted">
           Album and style reviews, plus tips on country guitar and songwriting.
         </p>

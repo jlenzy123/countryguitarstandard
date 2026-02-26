@@ -23,7 +23,7 @@ export default function NashvillePage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
       <div className="border-l-4 border-barn pl-4">
-        <h1 className="font-display text-3xl font-bold text-cream">Nashville Number System</h1>
+        <h1 className="font-display text-3xl font-semibold text-cream">Nashville Number System</h1>
         <p className="mt-2 text-cream-muted">
           Convert between chord names and numbers in any key. Learn how charts work.
         </p>

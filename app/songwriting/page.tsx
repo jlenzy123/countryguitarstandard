@@ -2,7 +2,7 @@ export default function SongwritingPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <div className="border-l-4 border-gold pl-4">
-        <h1 className="font-display text-3xl font-bold text-cream">Songwriting Template</h1>
+        <h1 className="font-display text-3xl font-semibold text-cream">Songwriting Template</h1>
         <p className="mt-2 text-cream-muted">
           Use this structure to capture ideas and turn them into finished songs. Add your own
           PDF or Notion link below when you have it ready.

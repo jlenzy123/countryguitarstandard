@@ -49,10 +49,10 @@ export default function ChordDiagramsPage() {
     <div className="mx-auto max-w-5xl px-4 py-12">
       {/* Header */}
       <div className="border-l-4 border-barn pl-4">
-        <h1 className="font-display text-2xl sm:text-3xl font-bold text-cream">
+        <h1 className="font-display text-2xl sm:text-3xl font-semibold text-cream">
           Interactive Chord Diagrams
         </h1>
-        <p className="mt-2 text-cream-muted text-sm sm:text-base">
+        <p className="mt-2 text-cream-muted text-sm sm:text-base leading-relaxed">
           Select a progression, see the chord shapes, and switch between easy, open, barre, or power chord voicings.
         </p>
       </div>
@@ -67,7 +67,7 @@ export default function ChordDiagramsPage() {
 
       {/* Controls */}
       <section className="mt-8 rounded-lg bg-void-card border border-saddle/50 p-4 sm:p-6">
-        <h2 className="font-display font-semibold text-cream mb-4">Select Progression</h2>
+        <h2 className="font-display font-medium text-cream mb-4">Select Progression</h2>
 
         {/* Key selector */}
         <div className="flex flex-wrap gap-4 mb-6">
@@ -195,7 +195,7 @@ export default function ChordDiagramsPage() {
                   key={chordName}
                   className="flex flex-col items-center justify-center p-4 rounded-lg bg-void-card border border-saddle/30 min-h-[150px]"
                 >
-                  <span className="font-display font-bold text-cream text-lg">{chordName}</span>
+                  <span className="font-display font-semibold text-cream text-lg">{chordName}</span>
                   <span className="text-xs text-cream-muted mt-2">Coming soon</span>
                 </div>
               )

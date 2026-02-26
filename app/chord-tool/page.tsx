@@ -34,8 +34,8 @@ export default function ChordToolPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
       <div className="border-l-4 border-barn pl-4">
-        <h1 className="font-display text-3xl font-bold text-cream">Chord Progression Tool</h1>
-        <p className="mt-2 text-cream-muted">
+        <h1 className="font-display text-3xl font-semibold text-cream">Chord Progression Tool</h1>
+        <p className="mt-2 text-cream-muted leading-relaxed">
           Browse progressions in every key or enter chords you’re playing and get suggestions for what comes next.
         </p>
       </div>
@@ -46,7 +46,7 @@ export default function ChordToolPage() {
         className="mt-8 flex items-center justify-between w-full rounded-lg bg-barn px-6 py-4 text-cream hover:bg-barn-hover transition border-2 border-gold/50 shadow-lg"
       >
         <div>
-          <span className="font-display text-xl font-bold">See Chord Diagrams →</span>
+          <span className="font-display text-xl font-semibold">See Chord Diagrams →</span>
           <p className="text-sm text-cream/80 mt-1">Interactive fingering charts with easy, barre, and power chord options</p>
         </div>
       </Link>

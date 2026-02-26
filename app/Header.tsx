@@ -10,7 +10,7 @@ export default function NavigationHeader() {
       boxShadow: '0 0 30px rgba(198, 40, 40, 0.2), inset 0 1px 0 rgba(198, 40, 40, 0.1)'
     }}>
       <nav className="mx-auto max-w-4xl px-4 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2 font-display text-sm sm:text-lg font-semibold text-cream hover:text-barn transition-colors duration-300 flex-shrink-0">
+        <a href="/" className="flex items-center gap-2 font-display text-sm sm:text-lg font-medium text-cream hover:text-barn transition-colors duration-300 flex-shrink-0">
           <img 
             src="/favicon.png" 
             alt="CGS Logo" 

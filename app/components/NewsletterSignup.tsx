@@ -33,8 +33,8 @@ export default function NewsletterSignup() {
 
   return (
     <div className="rounded-lg bg-denim/20 border border-denim/50 p-6">
-      <h3 className="font-display text-lg font-semibold text-cream mb-2">Get updates</h3>
-      <p className="text-sm text-cream-muted mb-4">
+      <h3 className="font-display text-lg font-medium text-cream mb-2">Get updates</h3>
+      <p className="text-sm text-cream-muted mb-4 leading-relaxed">
         New guides, song breakdowns, and tools sent to your inbox.
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-2">

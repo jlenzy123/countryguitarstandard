@@ -15,7 +15,7 @@ export default function ShopPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <div className="border-l-4 border-saddle pl-4">
-        <h1 className="font-display text-3xl font-bold text-cream">Shop</h1>
+        <h1 className="font-display text-3xl font-semibold text-cream">Shop</h1>
         <p className="mt-2 text-cream-muted">
           Everything currently available: song guides, artist deep dives, industry reports, and more.
         </p>

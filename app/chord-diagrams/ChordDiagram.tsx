@@ -41,7 +41,7 @@ export default function ChordDiagram({
 
   return (
     <div className="flex flex-col items-center">
-      <span className="mb-1 font-display font-bold text-cream text-sm">{voicing.name}</span>
+      <span className="mb-1 font-display font-semibold text-cream text-sm">{voicing.name}</span>
       <svg 
         width={width} 
         height={height} 

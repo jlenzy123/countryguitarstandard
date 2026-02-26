@@ -39,7 +39,7 @@ export default function GuidePage({ params }: GuidePageProps) {
           </span>
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{guide.title}</h1>
+        <h1 className="text-4xl md:text-5xl font-semibold mb-4">{guide.title}</h1>
 
         <div className="flex flex-wrap gap-6 text-sm text-offwhite/60">
           <div>
@@ -65,21 +65,21 @@ export default function GuidePage({ params }: GuidePageProps) {
                   // Handle headings
                   if (paragraph.startsWith('# ')) {
                     return (
-                      <h2 key={idx} className="text-3xl font-bold mt-8 mb-4 text-barn">
+                      <h2 key={idx} className="text-3xl font-semibold mt-8 mb-4 text-barn">
                         {paragraph.replace('# ', '')}
                       </h2>
                     );
                   }
                   if (paragraph.startsWith('## ')) {
                     return (
-                      <h3 key={idx} className="text-2xl font-bold mt-6 mb-3 text-barn">
+                      <h3 key={idx} className="text-2xl font-semibold mt-6 mb-3 text-barn">
                         {paragraph.replace('## ', '')}
                       </h3>
                     );
                   }
                   if (paragraph.startsWith('### ')) {
                     return (
-                      <h4 key={idx} className="text-xl font-bold mt-5 mb-2 text-barn/80">
+                      <h4 key={idx} className="text-xl font-medium mt-5 mb-2 text-barn/80">
                         {paragraph.replace('### ', '')}
                       </h4>
                     );
@@ -129,7 +129,7 @@ export default function GuidePage({ params }: GuidePageProps) {
 
               {/* What You'll Learn */}
               <div>
-                <h4 className="font-bold text-sm uppercase tracking-wider text-offwhite/70 mb-3">
+                <h4 className="font-medium text-sm uppercase tracking-wider text-offwhite/70 mb-3">
                   What You'll Learn
                 </h4>
                 <ul className="space-y-2 text-sm text-offwhite/70">
@@ -163,7 +163,7 @@ export default function GuidePage({ params }: GuidePageProps) {
 
       {/* Related Guides */}
       <div className="max-w-3xl mx-auto px-6 mt-20 pt-12 border-t border-barn/30">
-        <h2 className="text-2xl font-bold mb-6">Related Guides</h2>
+        <h2 className="text-2xl font-medium mb-6">Related Guides</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {/* Placeholder for related guides */}
           <div className="bg-void-card border border-barn/20 rounded-lg p-6">
