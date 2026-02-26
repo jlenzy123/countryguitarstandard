@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
-import Header from './Header'
+import NavigationHeader from './Header'
 import './globals.css'
 
 const outfit = Outfit({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <body className="min-h-screen font-sans antialiased bg-void text-cream">
-        <Header />
+        <NavigationHeader />
         <main>{children}</main>
         <div className="palette-stripe mt-16" />
         <footer className="bg-void border-t border-barn/60 py-8 text-center text-sm text-cream-muted font-sans" style={{

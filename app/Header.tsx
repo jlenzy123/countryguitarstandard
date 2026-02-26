@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-export default function Header() {
+export default function NavigationHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
