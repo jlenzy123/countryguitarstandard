@@ -3,8 +3,15 @@
 import { useState } from 'react'
 import { KEY_ORDER, numbersToChords } from '@/lib/nashville'
 
+// Relative minor for each major key (6th scale degree)
+const RELATIVE_MINOR: Record<string, string> = {
+  C: 'Am', Db: 'Bbm', D: 'Bm', Eb: 'Cm', E: 'C#m', F: 'Dm',
+  Gb: 'Ebm', G: 'Em', Ab: 'Fm', A: 'F#m', Bb: 'Gm', B: 'G#m'
+}
+
 export default function NashvillePage() {
   const [key, setKey] = useState('G')
+  const relativeMinor = RELATIVE_MINOR[key] || 'Em'
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
@@ -58,6 +65,33 @@ export default function NashvillePage() {
         <p className="mt-4 text-xs text-cream-muted text-center">
           Major: 1, 4, 5 · Minor: 2m, 3m, 6m · Diminished: 7dim
         </p>
+
+        {/* Relative minor/major indicator */}
+        <div className="mt-5 pt-4 border-t border-barn/20">
+          <p className="text-sm text-center text-cream-muted">
+            <span className="text-cream font-medium">{key} major</span> ↔ <span className="text-cream font-medium">{relativeMinor}</span> (relative minor)
+          </p>
+          <p className="text-xs text-center text-cream-muted mt-1">
+            Playing in {relativeMinor}? Use this {key} major chart — {relativeMinor} is the 6m chord.
+          </p>
+        </div>
+      </section>
+
+      {/* Relative Major/Minor Reference */}
+      <section className="mt-8 rounded-lg bg-void-card border border-saddle/50 p-6">
+        <h2 className="font-display font-medium text-cream mb-4">Relative Major & Minor Keys</h2>
+        <p className="text-sm text-cream-muted mb-4">
+          Every major key has a relative minor that shares the same chords. If you're in a minor key, find it below and use the major key chart above.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm">
+          {KEY_ORDER.map((k) => (
+            <div key={k} className="bg-void rounded px-3 py-2 border border-barn/20 text-center">
+              <span className="text-cream">{k}</span>
+              <span className="text-cream-muted mx-1">↔</span>
+              <span className="text-cream">{RELATIVE_MINOR[k]}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       <p className="mt-10 text-sm text-cream-muted">
