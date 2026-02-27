@@ -34,7 +34,7 @@ export default function NewsletterSignup() {
   return (
     <div>
       <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-3">Stay Updated</p>
-      <h3 className="font-western text-3xl text-cream-light mb-2">Get new guides in your inbox</h3>
+      <h3 className="font-bebas text-3xl text-cream-light mb-2 uppercase tracking-wide">Get new guides in your inbox</h3>
       <p className="text-sm text-cream-muted mb-6 max-w-md">Song breakdowns, tools, and resources — no spam.</p>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md">
         <input
