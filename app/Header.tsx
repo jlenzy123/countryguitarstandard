@@ -17,12 +17,9 @@ export default function NavigationHeader() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-void/95 backdrop-blur-md border-b-2 border-accent/20">
-      <nav className="mx-auto max-w-5xl px-5 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group">
-          <img src="/favicon.png" alt="CGS" className="h-8 w-8 rounded" />
-          <span className="font-western text-lg sm:text-xl text-cream-light tracking-wide group-hover:text-accent transition-colors">
-            Country Guitar Standard
-          </span>
+      <nav className="mx-auto max-w-5xl px-5 py-2 flex items-center justify-between">
+        <a href="/" className="flex items-center gap-2 group">
+          <img src="/new logo.png" alt="Country Guitar Standard" className="h-16 w-auto" />
         </a>
 
         {/* Desktop */}
