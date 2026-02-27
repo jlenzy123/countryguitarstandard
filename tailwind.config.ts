@@ -14,34 +14,34 @@ const config: Config = {
       },
       colors: {
         void: {
-          DEFAULT: '#0a0a0a',
-          elevated: '#141414',
-          card: '#1a1a1a',
+          DEFAULT: '#fafaf8',
+          elevated: '#f0ede8',
+          card: '#ffffff',
         },
         cream: {
-          DEFAULT: '#ffffff',
-          muted: '#a3a3a3',
+          DEFAULT: '#1a1a1a',
+          muted: '#6b7280',
         },
         // Warm gold accent palette
         denim: {
-          DEFAULT: '#d4a24e',
-          hover: '#e2b86a',
+          DEFAULT: '#b8860b',
+          hover: '#a37608',
         },
         saddle: {
-          DEFAULT: '#8b6914',
-          hover: '#a37c1e',
-        },
-        barn: {
           DEFAULT: '#d4a24e',
           hover: '#c08e3a',
         },
+        barn: {
+          DEFAULT: '#b8860b',
+          hover: '#a37608',
+        },
         gold: {
-          DEFAULT: '#d4a24e',
-          hover: '#e2b86a',
+          DEFAULT: '#b8860b',
+          hover: '#a37608',
         },
         teal: {
-          DEFAULT: '#d4a24e',
-          hover: '#e2b86a',
+          DEFAULT: '#b8860b',
+          hover: '#a37608',
         },
       },
     },

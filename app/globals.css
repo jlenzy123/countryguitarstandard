@@ -44,19 +44,19 @@
 }
 
 :root {
-  --bg: #0a0a0a;
-  --surface: #141414;
-  --card: #1a1a1a;
-  --offwhite: #ffffff;
-  --offwhite-muted: #a3a3a3;
-  --brand-gold: #d4a24e;
-  --brand-gold-dark: #c08e3a;
-  --accent-gold: #d4a24e;
+  --bg: #fafaf8;
+  --surface: #f0ede8;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --brand-gold: #b8860b;
+  --brand-gold-dark: #a37608;
+  --accent-gold: #b8860b;
 }
 
 body {
   background: var(--bg);
-  color: var(--offwhite);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -69,31 +69,31 @@ body {
   background: linear-gradient(90deg, transparent, var(--brand-gold), transparent);
 }
 
-/* Clean card styling - no glow, subtle borders */
+/* Clean card styling - light theme */
 .bg-void-card {
   background-color: var(--card);
   border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .bg-void-card:hover {
-  border-color: rgba(212, 162, 78, 0.4);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-color: rgba(184, 134, 11, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Make selects readable on dark background (including dropdown options) */
+/* Make selects readable */
 select {
   background-color: var(--card);
-  color: var(--offwhite);
+  color: var(--text);
   min-height: 44px;
   font-size: 16px;
 }
 
 select option {
   background-color: var(--card);
-  color: var(--offwhite);
+  color: var(--text);
 }
 
 /* Mobile improvements */

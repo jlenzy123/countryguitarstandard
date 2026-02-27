@@ -17,14 +17,14 @@ export default function SongwritingPage() {
           <li>Chord progression boxes per section</li>
           <li>Notes and “save for later” ideas</li>
         </ul>
-        <div className="mt-8 rounded-lg bg-void border border-denim/40 p-6 text-center">
+        <div className="mt-8 rounded-lg bg-void-elevated border border-denim/40 p-6 text-center">
           <p className="text-sm text-cream-muted">
             Drop your template PDF in <code className="rounded bg-void-card px-1.5 py-0.5 text-gold">/public</code> and
             link it here, or link to a Notion page.
           </p>
           <a
             href="#"
-            className="mt-4 inline-block rounded bg-barn px-5 py-2.5 text-cream font-medium hover:bg-barn-hover transition-colors"
+            className="mt-4 inline-block rounded bg-barn px-5 py-2.5 text-white font-medium hover:bg-barn-hover transition-colors"
           >
             Download template (coming soon)
           </a>

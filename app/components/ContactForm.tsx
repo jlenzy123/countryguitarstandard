@@ -51,7 +51,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 rounded bg-void text-cream placeholder-cream-muted border border-barn/50 focus:outline-none focus:border-barn text-sm"
+          className="w-full px-3 py-2 rounded bg-void-elevated text-cream placeholder-cream-muted border border-black/15 focus:outline-none focus:border-barn text-sm"
           placeholder="Your name"
         />
       </div>
@@ -64,7 +64,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 rounded bg-void text-cream placeholder-cream-muted border border-barn/50 focus:outline-none focus:border-barn text-sm"
+          className="w-full px-3 py-2 rounded bg-void-elevated text-cream placeholder-cream-muted border border-black/15 focus:outline-none focus:border-barn text-sm"
           placeholder="your@email.com"
         />
       </div>
@@ -77,7 +77,7 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleChange}
           required
-          className="w-full px-3 py-2 rounded bg-void text-cream placeholder-cream-muted border border-barn/50 focus:outline-none focus:border-barn text-sm"
+          className="w-full px-3 py-2 rounded bg-void-elevated text-cream placeholder-cream-muted border border-black/15 focus:outline-none focus:border-barn text-sm"
           placeholder="What's this about?"
         />
       </div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={5}
-          className="w-full px-3 py-2 rounded bg-void text-cream placeholder-cream-muted border border-barn/50 focus:outline-none focus:border-barn text-sm"
+          className="w-full px-3 py-2 rounded bg-void-elevated text-cream placeholder-cream-muted border border-black/15 focus:outline-none focus:border-barn text-sm"
           placeholder="Your message..."
         />
       </div>
@@ -98,7 +98,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="px-4 py-2 rounded bg-barn text-void font-medium hover:bg-barn-hover transition-colors disabled:opacity-50 w-full"
+        className="px-4 py-2 rounded bg-barn text-white font-medium hover:bg-barn-hover transition-colors disabled:opacity-50 w-full"
       >
         {loading ? 'Sending...' : 'Send Message'}
       </button>

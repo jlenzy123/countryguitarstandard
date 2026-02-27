@@ -44,12 +44,12 @@ export default function NewsletterSignup() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="px-3 py-2 rounded bg-void text-cream placeholder-cream-muted border border-barn/50 focus:outline-none focus:border-barn text-sm"
+          className="px-3 py-2 rounded bg-void-elevated text-cream placeholder-cream-muted border border-black/15 focus:outline-none focus:border-barn text-sm"
         />
         <button
           type="submit"
           disabled={loading}
-          className="px-4 py-2 rounded bg-barn text-void font-medium hover:bg-barn-hover transition-colors disabled:opacity-50 text-sm"
+          className="px-4 py-2 rounded bg-barn text-white font-medium hover:bg-barn-hover transition-colors disabled:opacity-50 text-sm"
         >
           {loading ? 'Subscribing...' : 'Subscribe'}
         </button>

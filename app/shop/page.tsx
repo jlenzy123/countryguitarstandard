@@ -36,7 +36,7 @@ export default function ShopPage() {
               <span className="font-semibold text-cream">${guide.price}</span>
               <Link
                 href={`/guides/${guide.slug}`}
-                className="rounded bg-barn px-4 py-2 text-cream font-medium hover:bg-barn-hover transition-colors"
+                className="rounded bg-barn px-4 py-2 text-white font-medium hover:bg-barn-hover transition-colors"
               >
                 View & Buy
               </Link>

@@ -46,7 +46,7 @@ export default function ChordDiagram({
         width={width} 
         height={height} 
         viewBox={`0 0 ${width} ${height}`}
-        className="bg-void-card rounded border border-saddle/30"
+        className="bg-void-card rounded border border-black/10"
       >
         {/* Nut (thick line at top) - only show for open position */}
         {!showBaseFret && (
@@ -65,7 +65,7 @@ export default function ChordDiagram({
             x={paddingLeft - 10}
             y={paddingTop + fretSpacing / 2 + 4}
             fontSize={fontSize}
-            fill="#f5f0e6"
+            fill="#a3a3a3"
             textAnchor="middle"
           >
             {baseFret}
@@ -80,7 +80,7 @@ export default function ChordDiagram({
             y1={paddingTop + i * fretSpacing}
             x2={width - paddingRight}
             y2={paddingTop + i * fretSpacing}
-            stroke={i === 0 ? '#8b7355' : '#5c4a3a'}
+            stroke={i === 0 ? '#8b7355' : '#d1ccc3'}
             strokeWidth={i === 0 ? 2 : 1}
           />
         ))}
@@ -93,7 +93,7 @@ export default function ChordDiagram({
             y1={paddingTop}
             x2={paddingLeft + i * stringSpacing}
             y2={paddingTop + fretboardHeight}
-            stroke="#a89070"
+            stroke="#b0a898"
             strokeWidth={1 + (5 - i) * 0.15}
           />
         ))}
@@ -106,7 +106,7 @@ export default function ChordDiagram({
             width={fretboardWidth + dotSize}
             height={dotSize}
             rx={dotSize / 2}
-            fill="#d4a24e"
+            fill="#b8860b"
             opacity={0.8}
           />
         )}
@@ -123,7 +123,7 @@ export default function ChordDiagram({
                 x={x}
                 y={paddingTop - 8}
                 fontSize={fontSize}
-                fill="#9ca3af"
+                fill="#6b7280"
                 textAnchor="middle"
               >
                 ×
@@ -140,7 +140,7 @@ export default function ChordDiagram({
                 cy={paddingTop - 10}
                 r={dotSize / 2 - 1}
                 fill="none"
-                stroke="#f5f0e6"
+                stroke="#8b7355"
                 strokeWidth={1.5}
               />
             )
@@ -157,7 +157,7 @@ export default function ChordDiagram({
                 cx={x}
                 cy={y}
                 r={dotSize}
-                fill="#d4a24e"
+                fill="#b8860b"
               />
               {showFingers && finger > 0 && (
                 <text
@@ -182,7 +182,7 @@ export default function ChordDiagram({
             x={paddingLeft + i * stringSpacing}
             y={height - 5}
             fontSize={fontSize - 2}
-            fill="#9ca3af"
+            fill="#6b7280"
             textAnchor="middle"
           >
             {name}

@@ -25,7 +25,7 @@ export default function GuidesPage() {
       <div className="max-w-4xl mx-auto px-6 mb-16">
         <div className="palette-stripe mb-8" />
         <h1 className="text-5xl font-medium mb-4">Guides & Reports</h1>
-        <p className="text-lg text-offwhite/80 max-w-2xl">
+        <p className="text-lg text-cream-muted max-w-2xl">
           Deep-dive analyses of songs, artists, and the music industry. Learn the techniques, patterns, and strategies behind today's biggest hits.
         </p>
       </div>
@@ -37,8 +37,8 @@ export default function GuidesPage() {
             onClick={() => setSelectedType(null)}
             className={`px-4 py-2 rounded border transition-all ${
               selectedType === null
-                ? 'bg-barn border-barn text-void'
-                : 'border-barn/50 text-offwhite hover:border-barn'
+                ? 'bg-barn border-barn text-white'
+                : 'border-barn/50 text-cream hover:border-barn'
             }`}
           >
             All Guides
@@ -49,8 +49,8 @@ export default function GuidesPage() {
               onClick={() => setSelectedType(type.value)}
               className={`px-4 py-2 rounded border transition-all ${
                 selectedType === type.value
-                  ? 'bg-barn border-barn text-void'
-                  : 'border-barn/50 text-offwhite hover:border-barn'
+                  ? 'bg-barn border-barn text-white'
+                  : 'border-barn/50 text-cream hover:border-barn'
               }`}
             >
               {type.label}
@@ -63,7 +63,7 @@ export default function GuidesPage() {
       <div className="max-w-4xl mx-auto px-6">
         {filteredGuides.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-offwhite/60">No guides yet. Check back soon!</p>
+            <p className="text-cream-muted">No guides yet. Check back soon!</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-6">
@@ -86,12 +86,12 @@ export default function GuidesPage() {
                 </h2>
 
                 {/* Excerpt */}
-                <p className="text-offwhite/70 text-sm mb-4 line-clamp-3">
+                <p className="text-cream-muted text-sm mb-4 line-clamp-3">
                   {guide.excerpt}
                 </p>
 
                 {/* Meta */}
-                <div className="flex items-center justify-between text-xs text-offwhite/50 mb-4">
+                <div className="flex items-center justify-between text-xs text-cream-muted mb-4">
                   <span>{guide.readTime} min read</span>
                   <span>{new Date(guide.datePublished).toLocaleDateString()}</span>
                 </div>
@@ -110,10 +110,10 @@ export default function GuidesPage() {
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto px-6 mt-20 py-12 bg-void-card border border-barn/30 rounded-lg">
         <h3 className="text-2xl font-medium mb-2">What's Coming</h3>
-        <p className="text-offwhite/70 mb-4">
+        <p className="text-cream-muted mb-4">
           Industry reports on country music trends, more artist deep-dives, and specialized songwriting techniques guides.
         </p>
-        <p className="text-sm text-offwhite/50">Check back regularly for new releases.</p>
+        <p className="text-sm text-cream-muted">Check back regularly for new releases.</p>
       </div>
     </div>
   );

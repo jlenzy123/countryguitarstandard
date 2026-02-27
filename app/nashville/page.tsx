@@ -41,7 +41,7 @@ export default function NashvillePage() {
           <select
             value={key}
             onChange={(e) => setKey(e.target.value)}
-            className="rounded-lg border-2 border-barn bg-void px-4 py-2 text-cream text-lg font-medium min-w-[100px]"
+            className="rounded-lg border-2 border-barn bg-void-elevated px-4 py-2 text-cream text-lg font-medium min-w-[100px]"
           >
             {KEY_ORDER.map((k) => (
               <option key={k} value={k}>Key of {k}</option>
@@ -54,7 +54,7 @@ export default function NashvillePage() {
           {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num) => {
             const chord = numbersToChords(num, key).trim()
             return (
-              <div key={num} className="bg-void rounded-lg p-3 border border-barn/20">
+              <div key={num} className="bg-void-elevated rounded-lg p-3 border border-black/10">
                 <div className="text-lg font-medium text-cream">{chord}</div>
                 <div className="text-xs text-cream-muted mt-1">{num}</div>
               </div>
@@ -67,7 +67,7 @@ export default function NashvillePage() {
         </p>
 
         {/* Relative minor/major indicator */}
-        <div className="mt-5 pt-4 border-t border-barn/20">
+        <div className="mt-5 pt-4 border-t border-black/10">
           <p className="text-sm text-center text-cream-muted">
             <span className="text-cream font-medium">{key} major</span> ↔ <span className="text-cream font-medium">{relativeMinor}</span> (relative minor)
           </p>
@@ -85,7 +85,7 @@ export default function NashvillePage() {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm">
           {KEY_ORDER.map((k) => (
-            <div key={k} className="bg-void rounded px-3 py-2 border border-barn/20 text-center">
+            <div key={k} className="bg-void-elevated rounded px-3 py-2 border border-black/10 text-center">
               <span className="text-cream">{k}</span>
               <span className="text-cream-muted mx-1">↔</span>
               <span className="text-cream">{RELATIVE_MINOR[k]}</span>

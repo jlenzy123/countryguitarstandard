@@ -41,15 +41,15 @@ export default function GuidePage({ params }: GuidePageProps) {
 
         <h1 className="text-4xl md:text-5xl font-medium mb-4">{guide.title}</h1>
 
-        <div className="flex flex-wrap gap-6 text-sm text-offwhite/60">
+        <div className="flex flex-wrap gap-6 text-sm text-cream-muted">
           <div>
-            <span className="text-offwhite/40">By</span> {guide.author}
+            <span className="text-cream-muted">By</span> {guide.author}
           </div>
           <div>
-            <span className="text-offwhite/40">Published</span> {new Date(guide.datePublished).toLocaleDateString()}
+            <span className="text-cream-muted">Published</span> {new Date(guide.datePublished).toLocaleDateString()}
           </div>
           <div>
-            <span className="text-offwhite/40">Read Time</span> {guide.readTime} minutes
+            <span className="text-cream-muted">Read Time</span> {guide.readTime} minutes
           </div>
         </div>
       </div>
@@ -59,8 +59,8 @@ export default function GuidePage({ params }: GuidePageProps) {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="md:col-span-2">
-            <div className="prose prose-invert max-w-none">
-              <article className="text-offwhite/90 leading-relaxed">
+            <div className="prose max-w-none">
+              <article className="text-cream/90 leading-relaxed">
                 {guide.content.split('\n\n').map((paragraph, idx) => {
                   // Handle headings
                   if (paragraph.startsWith('# ')) {
@@ -95,7 +95,7 @@ export default function GuidePage({ params }: GuidePageProps) {
                     return (
                       <ul key={idx} className="list-disc list-inside mb-4 space-y-2">
                         {items.map((item, i) => (
-                          <li key={i} className="text-offwhite/80">
+                          <li key={i} className="text-cream-muted">
                             {item}
                           </li>
                         ))}
@@ -107,7 +107,7 @@ export default function GuidePage({ params }: GuidePageProps) {
                   return (
                     <p
                       key={idx}
-                      className="mb-4 text-offwhite/80"
+                      className="mb-4 text-cream-muted"
                       dangerouslySetInnerHTML={{ __html: processed }}
                     />
                   );
@@ -122,17 +122,17 @@ export default function GuidePage({ params }: GuidePageProps) {
               {/* Price & Purchase */}
               <div className="mb-6 pb-6 border-b border-barn/30">
                 <div className="text-4xl font-bold text-barn mb-2">${guide.price}</div>
-                <button className="w-full bg-barn text-void font-bold py-3 rounded hover:bg-barn/90 transition-colors">
+                <button className="w-full bg-barn text-white font-bold py-3 rounded hover:bg-barn/90 transition-colors">
                   Buy Now
                 </button>
               </div>
 
               {/* What You'll Learn */}
               <div>
-                <h4 className="font-medium text-sm uppercase tracking-wider text-offwhite/70 mb-3">
+                <h4 className="font-medium text-sm uppercase tracking-wider text-cream-muted mb-3">
                   What You'll Learn
                 </h4>
-                <ul className="space-y-2 text-sm text-offwhite/70">
+                <ul className="space-y-2 text-sm text-cream-muted">
                   <li className="flex items-start">
                     <span className="text-barn mr-2">✓</span>
                     <span>Deep analysis of techniques and patterns</span>
@@ -154,7 +154,7 @@ export default function GuidePage({ params }: GuidePageProps) {
 
               {/* Description */}
               <div className="mt-6 pt-6 border-t border-barn/30">
-                <p className="text-sm text-offwhite/60">{guide.description}</p>
+                <p className="text-sm text-cream-muted">{guide.description}</p>
               </div>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function GuidePage({ params }: GuidePageProps) {
           {/* Placeholder for related guides */}
           <div className="bg-void-card border border-barn/20 rounded-lg p-6">
             <span className="text-xs uppercase tracking-wider text-barn/60 font-semibold">Coming Soon</span>
-            <p className="text-offwhite/70 mt-2">More guides being written...</p>
+            <p className="text-cream-muted mt-2">More guides being written...</p>
           </div>
         </div>
       </div>

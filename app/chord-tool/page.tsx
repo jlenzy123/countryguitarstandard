@@ -43,11 +43,11 @@ export default function ChordToolPage() {
       {/* Link to chord diagrams */}
       <Link
         href="/chord-diagrams"
-        className="mt-8 flex items-center justify-between w-full rounded-lg bg-barn px-6 py-4 text-cream hover:bg-barn-hover transition border-2 border-gold/50 shadow-lg"
+        className="mt-8 flex items-center justify-between w-full rounded-lg bg-barn px-6 py-4 text-white hover:bg-barn-hover transition border-2 border-gold/50 shadow-lg"
       >
         <div>
           <span className="font-display text-xl font-medium">See Chord Diagrams →</span>
-          <p className="text-sm text-cream/80 mt-1">Interactive fingering charts with easy, barre, and power chord options</p>
+          <p className="text-sm text-white/80 mt-1">Interactive fingering charts with easy, barre, and power chord options</p>
         </div>
       </Link>
 
@@ -64,7 +64,7 @@ export default function ChordToolPage() {
               <select
                 value={continueKey}
                 onChange={(e) => setContinueKey(e.target.value)}
-                className="mt-1 rounded border border-saddle/50 bg-void px-3 py-2 text-cream"
+                className="mt-1 rounded border border-saddle/50 bg-void-elevated px-3 py-2 text-cream"
               >
                 {KEY_ORDER.map((k) => (
                   <option key={k} value={k}>{k}</option>
@@ -78,11 +78,11 @@ export default function ChordToolPage() {
                 value={continueChords}
                 onChange={(e) => setContinueChords(e.target.value)}
                 placeholder="G C D Em"
-                className="mt-1 w-full rounded border border-saddle/50 bg-void px-4 py-2 text-cream placeholder-cream-muted"
+                className="mt-1 w-full rounded border border-saddle/50 bg-void-elevated px-4 py-2 text-cream placeholder-cream-muted"
               />
             </div>
           </div>
-          <button type="submit" className="rounded bg-barn px-4 py-2 text-cream font-medium hover:bg-barn-hover">
+          <button type="submit" className="rounded bg-barn px-4 py-2 text-white font-medium hover:bg-barn-hover">
             Suggest next chords
           </button>
         </form>
@@ -107,8 +107,8 @@ export default function ChordToolPage() {
               onClick={() => setKey(k)}
               className={`rounded px-3 py-2 text-sm font-medium transition ${
                 key === k
-                  ? 'bg-barn text-cream'
-                  : 'bg-denim/40 text-cream hover:bg-denim/60'
+                  ? 'bg-barn text-white'
+                  : 'bg-denim/10 text-cream hover:bg-denim/20'
               }`}
             >
               {k}
@@ -128,7 +128,7 @@ export default function ChordToolPage() {
               {progressions.map((prog, i) => (
                 <li
                   key={i}
-                  className="flex flex-wrap items-center gap-2 rounded-lg bg-void border-l-4 border-teal px-4 py-3 font-mono text-lg text-cream"
+                  className="flex flex-wrap items-center gap-2 rounded-lg bg-void-elevated border-l-4 border-teal px-4 py-3 font-mono text-lg text-cream"
                 >
                   {prog.map((chord, j) => (
                     <span key={j}>

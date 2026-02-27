@@ -79,7 +79,7 @@ export default function ChordDiagramsPage() {
                 setSelectedKey(e.target.value)
                 setSelectedProgressionIndex(0)
               }}
-              className="rounded border border-saddle/50 bg-void px-3 py-2 text-cream"
+              className="rounded border border-saddle/50 bg-void-elevated px-3 py-2 text-cream"
             >
               {KEY_ORDER.map((k) => (
                 <option key={k} value={k}>
@@ -94,7 +94,7 @@ export default function ChordDiagramsPage() {
             <select
               value={selectedProgressionIndex}
               onChange={(e) => setSelectedProgressionIndex(Number(e.target.value))}
-              className="w-full rounded border border-saddle/50 bg-void px-3 py-2 text-cream"
+              className="w-full rounded border border-saddle/50 bg-void-elevated px-3 py-2 text-cream"
             >
               {progressions.map((prog, i) => (
                 <option key={i} value={i}>
@@ -113,8 +113,8 @@ export default function ChordDiagramsPage() {
               onClick={() => setStyleFilter('all')}
               className={`px-3 py-1.5 rounded text-sm font-medium transition ${
                 styleFilter === 'all'
-                  ? 'bg-barn text-cream'
-                  : 'bg-denim/40 text-cream hover:bg-denim/60'
+                  ? 'bg-barn text-white'
+                  : 'bg-denim/10 text-cream hover:bg-denim/20'
               }`}
             >
               All Voicings
@@ -125,8 +125,8 @@ export default function ChordDiagramsPage() {
                 onClick={() => setStyleFilter(style.value)}
                 className={`px-3 py-1.5 rounded text-sm font-medium transition ${
                   styleFilter === style.value
-                    ? 'bg-barn text-cream'
-                    : 'bg-denim/40 text-cream hover:bg-denim/60'
+                    ? 'bg-barn text-white'
+                    : 'bg-denim/10 text-cream hover:bg-denim/20'
                 }`}
                 title={style.description}
               >
@@ -156,8 +156,8 @@ export default function ChordDiagramsPage() {
                 onClick={() => setDiagramSize(s)}
                 className={`px-2 py-1 rounded text-xs font-medium uppercase transition ${
                   diagramSize === s
-                    ? 'bg-gold text-void'
-                    : 'bg-denim/40 text-cream hover:bg-denim/60'
+                    ? 'bg-gold text-white'
+                    : 'bg-denim/10 text-cream hover:bg-denim/20'
                 }`}
               >
                 {s}

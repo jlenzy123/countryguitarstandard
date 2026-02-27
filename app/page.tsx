@@ -16,7 +16,7 @@ export default function Home() {
         <NewsletterSignup />
       </div>
 
-      <div className="mt-10 sm:mt-14 prose prose-invert max-w-none">
+      <div className="mt-10 sm:mt-14 prose max-w-none">
         <h2 className="text-lg sm:text-xl font-medium">What you'll find here</h2>
         <ul className="list-disc ml-4 sm:ml-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
           <li>Step-by-step <a href="/guides" className="text-gold hover:underline">song guides</a> explaining chord progressions, Nashville numbers, and stylistic choices</li>
@@ -73,7 +73,7 @@ export default function Home() {
         </p>
         <a
           href="/guides"
-          className="mt-4 inline-block rounded bg-barn px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base text-void font-medium hover:bg-barn-hover transition-colors"
+          className="mt-4 inline-block rounded bg-barn px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base text-white font-medium hover:bg-barn-hover transition-colors"
         >
           Browse Guides
         </a>
