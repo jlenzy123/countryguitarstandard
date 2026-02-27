@@ -33,8 +33,8 @@ export default function NewsletterSignup() {
 
   return (
     <div>
-      <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Stay Updated</p>
-      <h3 className="font-display text-2xl text-cream mb-2">Get new guides in your inbox</h3>
+      <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-3">Stay Updated</p>
+      <h3 className="font-western text-3xl text-cream-light mb-2">Get new guides in your inbox</h3>
       <p className="text-sm text-cream-muted mb-6 max-w-md">Song breakdowns, tools, and resources — no spam.</p>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md">
         <input
@@ -43,12 +43,12 @@ export default function NewsletterSignup() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-1 px-4 py-3 rounded-lg bg-void-card text-cream placeholder-cream-muted border border-white/[0.08] focus:outline-none focus:border-accent text-sm"
+          className="flex-1 px-4 py-3 bg-void-card text-cream placeholder-cream-dark border-2 border-cream/10 focus:outline-none focus:border-accent text-sm rounded-sm"
         />
         <button
           type="submit"
           disabled={loading}
-          className="px-6 py-3 rounded-lg bg-accent text-void font-medium text-sm uppercase tracking-wider hover:bg-accent-hover transition-colors disabled:opacity-50"
+          className="px-6 py-3 bg-accent text-void font-bebas font-bold text-base uppercase tracking-wider hover:bg-accent-hover transition-all disabled:opacity-50 shadow-md hover:shadow-lg rounded-sm"
         >
           {loading ? 'Subscribing...' : 'Subscribe'}
         </button>

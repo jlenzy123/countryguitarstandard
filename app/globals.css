@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0a;
-  --surface: #111111;
-  --card: #161616;
-  --text: #f5f0e8;
-  --text-muted: #9a9590;
-  --accent: #c9a84c;
-  --accent-hover: #dabb5e;
-  --accent-dim: #8b7a3a;
+  --bg: #0f0e0c;
+  --surface: #1a1816;
+  --card: #221f1b;
+  --text: #f5ead6;
+  --text-light: #fffcf2;
+  --text-muted: #b8a892;
+  --text-dark: #8b7d6b;
+  --accent: #d4a574;
+  --accent-hover: #e6ba8a;
+  --accent-dim: #a37f58;
 }
 
 body {
@@ -23,22 +25,25 @@ body {
 
 /* Accent stripe */
 .palette-stripe {
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background: linear-gradient(90deg, transparent 10%, var(--accent) 50%, transparent 90%);
+  background: linear-gradient(90deg, transparent 5%, var(--accent) 50%, transparent 95%);
+  box-shadow: 0 0 10px rgba(212, 165, 116, 0.3);
 }
 
 /* Card styling */
 .bg-void-card {
   background-color: var(--card);
-  border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  border-radius: 0.25rem;
+  border: 2px solid rgba(245, 234, 214, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .bg-void-card:hover {
-  border-color: rgba(201, 168, 76, 0.3);
-  transform: translateY(-2px);
+  border-color: rgba(212, 165, 116, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(212, 165, 116, 0.15);
 }
 
 /* Selects */
@@ -52,6 +57,22 @@ select {
 select option {
   background-color: var(--card);
   color: var(--text);
+}
+
+/* Western text effects */
+h1, h2, h3 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons with western style */
+button, .btn {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Link hover effects */
+a {
+  transition: all 0.2s ease;
 }
 
 /* Mobile */

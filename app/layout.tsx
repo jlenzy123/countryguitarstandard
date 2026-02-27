@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Rye, Bebas_Neue, Inter } from 'next/font/google'
 import NavigationHeader from './Header'
 import './globals.css'
 
@@ -9,9 +9,17 @@ const inter = Inter({
   display: 'swap',
 })
 
-const playfair = Playfair_Display({
+const rye = Rye({
+  weight: '400',
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-rye',
+  display: 'swap',
+})
+
+const bebas = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bebas',
   display: 'swap',
 })
 
@@ -35,14 +43,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${rye.variable} ${bebas.variable}`}>
       <body className="min-h-screen font-sans antialiased bg-void text-cream">
         <NavigationHeader />
         <main>{children}</main>
         <div className="palette-stripe mt-20" />
-        <footer className="bg-void py-12 text-center">
-          <p className="font-display text-lg text-cream tracking-wide">Country Guitar Standard</p>
-          <p className="mt-2 text-xs text-cream-muted uppercase tracking-widest">Templates &middot; Tabs &middot; Tools</p>
+        <footer className="bg-void py-16 text-center border-t border-cream/10">
+          <p className="font-western text-2xl text-cream tracking-wider">Country Guitar Standard</p>
+          <p className="mt-3 text-xs text-cream-muted font-bebas uppercase tracking-[0.3em]">Templates &middot; Tabs &middot; Tools</p>
         </footer>
       </body>
     </html>

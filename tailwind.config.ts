@@ -10,22 +10,25 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        western: ['var(--font-rye)', 'Georgia', 'serif'],
+        bebas: ['var(--font-bebas)', 'Arial', 'sans-serif'],
       },
       colors: {
         void: {
-          DEFAULT: '#0a0a0a',
-          elevated: '#111111',
-          card: '#161616',
+          DEFAULT: '#0f0e0c',
+          elevated: '#1a1816',
+          card: '#221f1b',
         },
         cream: {
-          DEFAULT: '#f5f0e8',
-          muted: '#9a9590',
+          DEFAULT: '#f5ead6',
+          light: '#fffcf2',
+          muted: '#b8a892',
+          dark: '#8b7d6b',
         },
         accent: {
-          DEFAULT: '#c9a84c',
-          hover: '#dabb5e',
-          dim: '#8b7a3a',
+          DEFAULT: '#d4a574',
+          hover: '#e6ba8a',
+          dim: '#a37f58',
         },
       },
     },
