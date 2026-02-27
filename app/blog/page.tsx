@@ -29,7 +29,7 @@ function formatDate(iso: string) {
 
 export default function BlogPage() {
   return (
-    <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
+    <div className="mx-auto max-w-4xl px-6 pt-24 pb-16">
       <div className="pt-8">
         <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Writing</p>
         <h1 className="font-bebas text-4xl sm:text-5xl font-bold text-cream uppercase tracking-wide mb-4">Blog</h1>

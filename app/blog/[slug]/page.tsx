@@ -29,7 +29,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound()
 
   return (
-    <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
+    <div className="mx-auto max-w-4xl px-6 pt-24 pb-16">
       <p className="pt-8 text-xs sm:text-sm text-cream-muted">
         <Link href="/blog" className="text-accent hover:underline">Blog</Link>
         <span className="mx-2">/</span>

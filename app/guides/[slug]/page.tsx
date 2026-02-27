@@ -20,7 +20,7 @@ export default function GuidePage({ params }: GuidePageProps) {
   return (
     <div className="min-h-screen bg-void pt-24 pb-20">
       {/* Back Link */}
-      <div className="max-w-3xl mx-auto px-6 mb-8 pt-8">
+      <div className="max-w-4xl mx-auto px-6 mb-8 pt-8">
         <Link
           href="/guides"
           className="text-accent hover:text-accent-hover text-sm uppercase tracking-[0.15em] transition-colors"
@@ -30,7 +30,7 @@ export default function GuidePage({ params }: GuidePageProps) {
       </div>
 
       {/* Header */}
-      <div className="max-w-3xl mx-auto px-6 mb-12">
+      <div className="max-w-4xl mx-auto px-6 mb-12">
         <div className="mb-4">
           <span className="text-xs uppercase tracking-[0.15em] text-accent">
             {getGuideTypeLabel(guide.type as any)}
@@ -53,7 +53,7 @@ export default function GuidePage({ params }: GuidePageProps) {
       </div>
 
       {/* Content Area */}
-      <div className="max-w-3xl mx-auto px-6 mb-12">
+      <div className="max-w-4xl mx-auto px-6 mb-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="md:col-span-2">
@@ -156,7 +156,7 @@ export default function GuidePage({ params }: GuidePageProps) {
       </div>
 
       {/* Related Guides */}
-      <div className="max-w-3xl mx-auto px-6 mt-20 pt-12 border-t border-white/[0.06]">
+      <div className="max-w-4xl mx-auto px-6 mt-20 pt-12 border-t border-white/[0.06]">
         <h2 className="font-bebas text-2xl font-bold text-cream uppercase tracking-wide mb-6">Related Guides</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-void-card border border-white/[0.06] rounded-xl p-6">

@@ -46,7 +46,7 @@ export default function ChordDiagramsPage() {
   const missingChords = uniqueChords.filter((chord) => !getChordData(chord))
 
   return (
-    <div className="mx-auto max-w-5xl px-4 pt-24 pb-16">
+    <div className="mx-auto max-w-4xl px-6 pt-24 pb-16">
       {/* Header */}
       <div className="pt-8">
         <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Tool</p>
