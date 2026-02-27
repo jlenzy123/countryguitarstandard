@@ -28,23 +28,23 @@ export default function Home() {
       {/* Feature cards */}
       <section className="mx-auto max-w-4xl px-5 py-16 sm:py-20">
         <h2 className="font-bebas text-2xl sm:text-4xl text-cream-light mb-8 sm:mb-10 uppercase tracking-wide">What You&rsquo;ll Find</h2>
-        <div className="grid gap-6 sm:gap-5 sm:grid-cols-2">
-          <a href="/guides" className="group bg-void-card p-5 sm:p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+          <a href="/guides" className="group bg-void-card p-4 sm:p-8">
             <p className="font-bebas text-sm uppercase tracking-[0.2em] text-accent mb-3">Guides & Reports</p>
             <h3 className="font-bebas text-xl text-cream group-hover:text-accent transition-colors uppercase tracking-wide">Song breakdowns & analysis</h3>
             <p className="mt-3 text-sm text-cream-muted leading-relaxed">Deep-dive guides on chord progressions, Nashville numbers, and the techniques behind today's biggest hits.</p>
           </a>
-          <a href="/chord-tool" className="group bg-void-card p-5 sm:p-8">
+          <a href="/chord-tool" className="group bg-void-card p-4 sm:p-8">
             <p className="font-bebas text-sm uppercase tracking-[0.2em] text-accent mb-3">Tools</p>
             <h3 className="font-bebas text-xl text-cream group-hover:text-accent transition-colors uppercase tracking-wide">Chord progressions & Nashville numbers</h3>
             <p className="mt-3 text-sm text-cream-muted leading-relaxed">Browse progressions in any key, get suggestions, and convert between chord names and numbers instantly.</p>
           </a>
-          <a href="/songwriting" className="group bg-void-card p-5 sm:p-8">
+          <a href="/songwriting" className="group bg-void-card p-4 sm:p-8">
             <p className="font-bebas text-sm uppercase tracking-[0.2em] text-accent mb-3">Templates</p>
             <h3 className="font-bebas text-xl text-cream group-hover:text-accent transition-colors uppercase tracking-wide">Songwriting template</h3>
             <p className="mt-3 text-sm text-cream-muted leading-relaxed">Structure your ideas with verse, chorus, and bridge sections. Free download.</p>
           </a>
-          <a href="/shop" className="group bg-void-card p-5 sm:p-8">
+          <a href="/shop" className="group bg-void-card p-4 sm:p-8">
             <p className="font-bebas text-sm uppercase tracking-[0.2em] text-accent mb-3">Shop</p>
             <h3 className="font-bebas text-xl text-cream group-hover:text-accent transition-colors uppercase tracking-wide">Premium downloads</h3>
             <p className="mt-3 text-sm text-cream-muted leading-relaxed">Paid song guides, album PDFs, artist analyses, and industry reports.</p>

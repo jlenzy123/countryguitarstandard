@@ -66,12 +66,12 @@ export default function GuidesPage() {
             <p className="text-cream-muted">No guides yet. Check back soon!</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {filteredGuides.map(guide => (
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}
-                className="group bg-void-card border border-white/[0.06] rounded-xl p-6 hover:border-accent/30 hover:shadow-[0_0_30px_rgba(201,168,76,0.1)] transition-all"
+                className="group bg-void-card border border-white/[0.06] rounded-xl p-4 sm:p-6 hover:border-accent/30 hover:shadow-[0_0_30px_rgba(201,168,76,0.1)] transition-all"
               >
                 {/* Type Badge */}
                 <div className="inline-block mb-4">
