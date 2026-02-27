@@ -49,9 +49,9 @@
   --card: #1a1a1a;
   --offwhite: #ffffff;
   --offwhite-muted: #a3a3a3;
-  --brand-red: #dc2626;
-  --brand-red-dark: #991b1b;
-  --accent-gold: #fbbf24;
+  --brand-gold: #d4a24e;
+  --brand-gold-dark: #c08e3a;
+  --accent-gold: #d4a24e;
 }
 
 body {
@@ -66,7 +66,7 @@ body {
 .palette-stripe {
   height: 2px;
   width: 100%;
-  background: linear-gradient(90deg, transparent, var(--brand-red), transparent);
+  background: linear-gradient(90deg, transparent, var(--brand-gold), transparent);
 }
 
 /* Clean card styling - no glow, subtle borders */
@@ -79,7 +79,7 @@ body {
 }
 
 .bg-void-card:hover {
-  border-color: rgba(220, 38, 38, 0.4);
+  border-color: rgba(212, 162, 78, 0.4);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 

@@ -73,7 +73,7 @@ export default function Home() {
         </p>
         <a
           href="/guides"
-          className="mt-4 inline-block rounded bg-barn px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base text-cream font-medium hover:bg-barn-hover transition-colors"
+          className="mt-4 inline-block rounded bg-barn px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base text-void font-medium hover:bg-barn-hover transition-colors"
         >
           Browse Guides
         </a>

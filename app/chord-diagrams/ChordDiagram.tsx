@@ -106,7 +106,7 @@ export default function ChordDiagram({
             width={fretboardWidth + dotSize}
             height={dotSize}
             rx={dotSize / 2}
-            fill="#dc2626"
+            fill="#d4a24e"
             opacity={0.8}
           />
         )}
@@ -157,7 +157,7 @@ export default function ChordDiagram({
                 cx={x}
                 cy={y}
                 r={dotSize}
-                fill="#dc2626"
+                fill="#d4a24e"
               />
               {showFingers && finger > 0 && (
                 <text

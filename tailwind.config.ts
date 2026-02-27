@@ -22,26 +22,26 @@ const config: Config = {
           DEFAULT: '#ffffff',
           muted: '#a3a3a3',
         },
-        // Clean red accent palette
+        // Warm gold accent palette
         denim: {
-          DEFAULT: '#dc2626',
-          hover: '#ef4444',
+          DEFAULT: '#d4a24e',
+          hover: '#e2b86a',
         },
         saddle: {
-          DEFAULT: '#7f1d1d',
-          hover: '#991b1b',
+          DEFAULT: '#8b6914',
+          hover: '#a37c1e',
         },
         barn: {
-          DEFAULT: '#dc2626',
-          hover: '#b91c1c',
+          DEFAULT: '#d4a24e',
+          hover: '#c08e3a',
         },
         gold: {
-          DEFAULT: '#fbbf24',
-          hover: '#fcd34d',
+          DEFAULT: '#d4a24e',
+          hover: '#e2b86a',
         },
         teal: {
-          DEFAULT: '#dc2626',
-          hover: '#ef4444',
+          DEFAULT: '#d4a24e',
+          hover: '#e2b86a',
         },
       },
     },

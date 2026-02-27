@@ -71,7 +71,7 @@ export default function GuidesPage() {
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}
-                className="group bg-void-card border border-barn/20 rounded-lg p-6 hover:border-barn/60 hover:shadow-[0_0_30px_rgba(198,40,40,0.3)] transition-all"
+                className="group bg-void-card border border-barn/20 rounded-lg p-6 hover:border-barn/60 hover:shadow-[0_0_30px_rgba(212,162,78,0.2)] transition-all"
               >
                 {/* Type Badge */}
                 <div className="inline-block mb-4">

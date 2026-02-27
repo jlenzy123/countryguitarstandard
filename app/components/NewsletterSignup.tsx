@@ -32,7 +32,7 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div className="rounded-lg bg-denim/20 border border-denim/50 p-6">
+    <div className="rounded-lg bg-barn/10 border border-barn/30 p-6">
       <h3 className="font-display text-lg font-medium text-cream mb-2">Get updates</h3>
       <p className="text-sm text-cream-muted mb-4 leading-relaxed">
         New guides, song breakdowns, and tools sent to your inbox.
@@ -49,7 +49,7 @@ export default function NewsletterSignup() {
         <button
           type="submit"
           disabled={loading}
-          className="px-4 py-2 rounded bg-barn text-cream font-medium hover:bg-barn-hover transition-colors disabled:opacity-50 text-sm"
+          className="px-4 py-2 rounded bg-barn text-void font-medium hover:bg-barn-hover transition-colors disabled:opacity-50 text-sm"
         >
           {loading ? 'Subscribing...' : 'Subscribe'}
         </button>
