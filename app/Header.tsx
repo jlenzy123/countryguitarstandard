@@ -19,7 +19,7 @@ export default function NavigationHeader() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-void/95 backdrop-blur-md border-b-2 border-accent/20">
       <nav className="mx-auto max-w-5xl px-5 py-2 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 group">
-          <img src="/new new new.png" alt="Country Guitar Standard" className="h-16 w-auto" />
+          <img src="/cream.png" alt="Country Guitar Standard" className="h-16 w-auto" />
         </a>
 
         {/* Desktop */}
