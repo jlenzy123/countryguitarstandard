@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero */}
       <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
         <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Songwriting &middot; Guitar &middot; Nashville</p>
-        <h1 className="font-western text-5xl sm:text-6xl lg:text-7xl text-cream-light leading-[1.1] drop-shadow-lg">
+        <h1 className="font-bebas text-5xl sm:text-6xl lg:text-7xl text-cream-light leading-[1.1] font-bold uppercase tracking-wide">
           Write better<br />country songs.
         </h1>
         <p className="mt-6 text-base sm:text-lg text-cream-muted leading-relaxed max-w-xl">
