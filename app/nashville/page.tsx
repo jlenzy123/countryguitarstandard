@@ -14,16 +14,17 @@ export default function NashvillePage() {
   const relativeMinor = RELATIVE_MINOR[key] || 'Em'
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-12">
-      <div className="border-l-4 border-barn pl-4">
-        <h1 className="font-display text-3xl font-medium text-cream">Nashville Number System</h1>
+    <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
+      <div className="pt-8">
+        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Tool</p>
+        <h1 className="font-display text-3xl sm:text-4xl font-medium text-cream">Nashville Number System</h1>
         <p className="mt-2 text-cream-muted">
           Convert between chord names and numbers in any key.
         </p>
       </div>
 
-      {/* How it works - first */}
-      <section className="mt-10 rounded-lg bg-void-card border border-saddle/50 p-6">
+      {/* How it works */}
+      <section className="mt-10 rounded-xl bg-void-card border border-white/[0.06] p-6">
         <h2 className="font-display font-medium text-cream">How it works</h2>
         <p className="mt-2 text-sm text-cream-muted">
           In any key, the scale degrees are numbered 1–7. The 1 chord is the tonic (e.g. G in G major),
@@ -35,13 +36,13 @@ export default function NashvillePage() {
       </section>
 
       {/* Quick Reference */}
-      <section className="mt-8 rounded-lg bg-void-card border border-barn/40 p-6">
+      <section className="mt-8 rounded-xl bg-void-card border border-white/[0.06] p-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <h2 className="font-display font-medium text-cream text-xl">Quick Reference</h2>
           <select
             value={key}
             onChange={(e) => setKey(e.target.value)}
-            className="rounded-lg border-2 border-barn bg-void-elevated px-4 py-2 text-cream text-lg font-medium min-w-[100px]"
+            className="rounded-lg border border-white/[0.08] bg-void-elevated px-4 py-2 text-cream text-lg font-medium min-w-[100px]"
           >
             {KEY_ORDER.map((k) => (
               <option key={k} value={k}>Key of {k}</option>
@@ -54,7 +55,7 @@ export default function NashvillePage() {
           {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num) => {
             const chord = numbersToChords(num, key).trim()
             return (
-              <div key={num} className="bg-void-elevated rounded-lg p-3 border border-black/10">
+              <div key={num} className="bg-void-elevated rounded-lg p-3 border border-white/[0.06]">
                 <div className="text-lg font-medium text-cream">{chord}</div>
                 <div className="text-xs text-cream-muted mt-1">{num}</div>
               </div>
@@ -67,7 +68,7 @@ export default function NashvillePage() {
         </p>
 
         {/* Relative minor/major indicator */}
-        <div className="mt-5 pt-4 border-t border-black/10">
+        <div className="mt-5 pt-4 border-t border-white/[0.06]">
           <p className="text-sm text-center text-cream-muted">
             <span className="text-cream font-medium">{key} major</span> ↔ <span className="text-cream font-medium">{relativeMinor}</span> (relative minor)
           </p>
@@ -78,14 +79,14 @@ export default function NashvillePage() {
       </section>
 
       {/* Relative Major/Minor Reference */}
-      <section className="mt-8 rounded-lg bg-void-card border border-saddle/50 p-6">
+      <section className="mt-8 rounded-xl bg-void-card border border-white/[0.06] p-6">
         <h2 className="font-display font-medium text-cream mb-4">Relative Major & Minor Keys</h2>
         <p className="text-sm text-cream-muted mb-4">
           Every major key has a relative minor that shares the same chords. If you're in a minor key, find it below and use the major key chart above.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm">
           {KEY_ORDER.map((k) => (
-            <div key={k} className="bg-void-elevated rounded px-3 py-2 border border-black/10 text-center">
+            <div key={k} className="bg-void-elevated rounded-lg px-3 py-2 border border-white/[0.06] text-center">
               <span className="text-cream">{k}</span>
               <span className="text-cream-muted mx-1">↔</span>
               <span className="text-cream">{RELATIVE_MINOR[k]}</span>
@@ -95,7 +96,7 @@ export default function NashvillePage() {
       </section>
 
       <p className="mt-10 text-sm text-cream-muted">
-        <a href="/" className="text-gold hover:underline">Back to home</a>
+        <a href="/" className="text-accent hover:underline">Back to home</a>
       </p>
     </div>
   )

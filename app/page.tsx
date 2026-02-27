@@ -2,119 +2,100 @@ import NewsletterSignup from './components/NewsletterSignup'
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8 sm:py-16">
-      <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium text-cream tracking-tight">
-        Country guitar<br className="sm:hidden" /> songwriting<br className="hidden sm:block" /> resources<br />for writers and players.
-      </h1>
-      <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-cream-muted leading-relaxed">
-        Free and premium guides, charts, and industry reports that teach you how to write better country
-        songs, navigate Nashville numbers, and play authentic progressions on acoustic or electric guitar.
-      </p>
-
-      {/* Newsletter Signup */}
-      <div className="mt-8 sm:mt-10">
-        <NewsletterSignup />
-      </div>
-
-      <div className="mt-10 sm:mt-14 prose max-w-none">
-        <h2 className="text-lg sm:text-xl font-medium">What you'll find here</h2>
-        <ul className="list-disc ml-4 sm:ml-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
-          <li>Step-by-step <a href="/guides" className="text-gold hover:underline">song guides</a> explaining chord progressions, Nashville numbers, and stylistic choices</li>
-          <li>In-depth <a href="/guides" className="text-gold hover:underline">artist analysis and industry reports</a> covering the modern country landscape</li>
-          <li>A free <a href="/songwriting" className="text-gold hover:underline">songwriting template</a> to capture ideas and structure lyrics</li>
-          <li>Tools like the <a href="/chord-tool" className="text-gold hover:underline">chord progression generator</a> and <a href="/nashville" className="text-gold hover:underline">Nashville number converter</a></li>
-        </ul>
-      </div>
-
-      <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <a
-          href="/guides"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
-        >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Guides & Reports</h2>
-          <p className="mt-2 text-xs sm:text-sm text-cream-muted">
-            Song breakdowns, artist deep dives, and industry analysis. Some free, some premium.
-          </p>
-        </a>
-        <a
-          href="/songwriting"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
-        >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Songwriting Template</h2>
-          <p className="mt-2 text-xs sm:text-sm text-cream-muted">
-            Structure your ideas: verses, chorus, bridge. Free download.
-          </p>
-        </a>
-        <a
-          href="/shop"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
-        >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Shop Products</h2>
-          <p className="mt-2 text-xs sm:text-sm text-cream-muted">
-            Paid song guides, album PDFs, and reports available now.
-          </p>
-        </a>
-        <a
-          href="/chord-tool"
-          className="group block rounded-lg bg-void-card p-4 sm:p-6 transition border-l-2 border-barn hover:border-l-4"
-        >
-          <h2 className="font-display text-sm sm:text-base font-medium text-cream group-hover:text-barn transition-colors">Chord Tool</h2>
-          <p className="mt-2 text-xs sm:text-sm text-cream-muted">
-            Browse progressions in any key or get suggestions based on chords you're playing.
-          </p>
-        </a>
-      </div>
-
-      <div className="mt-12 sm:mt-16 rounded-lg bg-barn/10 border border-barn/30 p-4 sm:p-8 text-center">
-        <p className="text-sm sm:text-base text-cream">
-          Start with a <strong className="text-gold">song guide</strong>, try the
-          <strong className="text-gold"> chord tool</strong> for progressions, or
-          explore the shop for premium downloads.
+    <div className="pt-24">
+      {/* Hero */}
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
+        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-4">Songwriting &middot; Guitar &middot; Nashville</p>
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-cream leading-[1.1]">
+          Write better<br />country songs.
+        </h1>
+        <p className="mt-6 text-base sm:text-lg text-cream-muted leading-relaxed max-w-xl">
+          Free and premium guides, Nashville number charts, and progression tools for writers and players.
         </p>
-        <a
-          href="/guides"
-          className="mt-4 inline-block rounded bg-barn px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base text-white font-medium hover:bg-barn-hover transition-colors"
-        >
-          Browse Guides
-        </a>
-      </div>
-
-      {/* FAQ for SEO */}
-      <section className="mt-16 sm:mt-24">
-        <h2 className="text-xl sm:text-2xl font-medium text-cream mb-4 sm:mb-6">Frequently Asked Questions</h2>
-        <div className="space-y-3 sm:space-y-4">
-          <details className="group rounded-lg bg-void-card p-3 sm:p-4" open>
-            <summary className="flex justify-between items-start sm:items-center cursor-pointer text-cream font-medium text-sm sm:text-base gap-2">
-              <span>What is the Nashville Number System?</span>
-              <span className="text-cream-muted group-open:rotate-180 transition-transform flex-shrink-0">▾</span>
-            </summary>
-            <div className="mt-2 text-xs sm:text-sm text-cream-muted">
-              The Nashville numbers method represents chords as scale degrees (1, 4, 5, 6m, etc.) so you can play in any key without rewriting the chart. Our <a href="/nashville" className="text-gold hover:underline">interactive converter</a> makes it easy.
-            </div>
-          </details>
-
-          <details className="group rounded-lg bg-void-card p-3 sm:p-4">
-            <summary className="flex justify-between items-start sm:items-center cursor-pointer text-cream font-medium text-sm sm:text-base gap-2">
-              <span>How do I write country chord progressions?</span>
-              <span className="text-cream-muted group-open:rotate-180 transition-transform flex-shrink-0">▾</span>
-            </summary>
-            <div className="mt-2 text-xs sm:text-sm text-cream-muted">
-              Browse hundreds of sample progressions in our <a href="/chord-tool" className="text-gold hover:underline">Chord Progression Tool</a>, which includes I–IV–V patterns, secondary chords, and common country moves.
-            </div>
-          </details>
-
-          <details className="group rounded-lg bg-void-card p-3 sm:p-4">
-            <summary className="flex justify-between items-start sm:items-center cursor-pointer text-cream font-medium text-sm sm:text-base gap-2">
-              <span>Are the guides free?</span>
-              <span className="text-cream-muted group-open:rotate-180 transition-transform flex-shrink-0">▾</span>
-            </summary>
-            <div className="mt-2 text-xs sm:text-sm text-cream-muted">
-              Some guides are free; premium song guides, artist analyses, and industry reports are sold for $7–$49 each. All items for sale appear on the <a href="/shop" className="text-gold hover:underline">Shop</a> page.
-            </div>
-          </details>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <a href="/guides" className="inline-flex items-center px-6 py-3 bg-accent text-void font-medium text-sm uppercase tracking-wider rounded hover:bg-accent-hover transition-colors">
+            Browse Guides
+          </a>
+          <a href="/chord-tool" className="inline-flex items-center px-6 py-3 border border-accent/40 text-accent font-medium text-sm uppercase tracking-wider rounded hover:border-accent hover:bg-accent/5 transition-all">
+            Chord Tool
+          </a>
         </div>
       </section>
 
+      {/* Section divider */}
+      <div className="palette-stripe" />
+
+      {/* Feature cards */}
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:py-20">
+        <h2 className="font-display text-2xl sm:text-3xl text-cream mb-10">What You&rsquo;ll Find</h2>
+        <div className="grid gap-5 sm:grid-cols-2">
+          <a href="/guides" className="group bg-void-card p-6 sm:p-8 rounded-xl">
+            <p className="text-xs uppercase tracking-[0.15em] text-accent mb-3">Guides & Reports</p>
+            <h3 className="font-display text-xl text-cream group-hover:text-accent transition-colors">Song breakdowns & analysis</h3>
+            <p className="mt-3 text-sm text-cream-muted leading-relaxed">Deep-dive guides on chord progressions, Nashville numbers, and the techniques behind today's biggest hits.</p>
+          </a>
+          <a href="/chord-tool" className="group bg-void-card p-6 sm:p-8 rounded-xl">
+            <p className="text-xs uppercase tracking-[0.15em] text-accent mb-3">Tools</p>
+            <h3 className="font-display text-xl text-cream group-hover:text-accent transition-colors">Chord progressions & Nashville numbers</h3>
+            <p className="mt-3 text-sm text-cream-muted leading-relaxed">Browse progressions in any key, get suggestions, and convert between chord names and numbers instantly.</p>
+          </a>
+          <a href="/songwriting" className="group bg-void-card p-6 sm:p-8 rounded-xl">
+            <p className="text-xs uppercase tracking-[0.15em] text-accent mb-3">Templates</p>
+            <h3 className="font-display text-xl text-cream group-hover:text-accent transition-colors">Songwriting template</h3>
+            <p className="mt-3 text-sm text-cream-muted leading-relaxed">Structure your ideas with verse, chorus, and bridge sections. Free download.</p>
+          </a>
+          <a href="/shop" className="group bg-void-card p-6 sm:p-8 rounded-xl">
+            <p className="text-xs uppercase tracking-[0.15em] text-accent mb-3">Shop</p>
+            <h3 className="font-display text-xl text-cream group-hover:text-accent transition-colors">Premium downloads</h3>
+            <p className="mt-3 text-sm text-cream-muted leading-relaxed">Paid song guides, album PDFs, artist analyses, and industry reports.</p>
+          </a>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="bg-void-elevated">
+        <div className="mx-auto max-w-4xl px-5 py-16 sm:py-20">
+          <NewsletterSignup />
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-4xl px-5 py-16 sm:py-20">
+        <h2 className="font-display text-2xl sm:text-3xl text-cream mb-8">FAQ</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: 'What is the Nashville Number System?',
+              a: 'It represents chords as scale degrees (1, 4, 5, 6m, etc.) so you can play in any key without rewriting the chart.',
+              link: '/nashville',
+              linkText: 'Try the converter',
+            },
+            {
+              q: 'How do I write country chord progressions?',
+              a: 'Browse hundreds of sample progressions in our Chord Progression Tool — I–IV–V patterns, secondary chords, and common country moves.',
+              link: '/chord-tool',
+              linkText: 'Open chord tool',
+            },
+            {
+              q: 'Are the guides free?',
+              a: 'Some guides are free. Premium song guides, artist analyses, and industry reports are $7–$49 each.',
+              link: '/shop',
+              linkText: 'View shop',
+            },
+          ].map((item, i) => (
+            <details key={i} className="group bg-void-card rounded-xl p-5 sm:p-6" open={i === 0}>
+              <summary className="flex justify-between items-center cursor-pointer text-cream font-medium text-sm sm:text-base">
+                <span>{item.q}</span>
+                <span className="text-cream-muted text-xl group-open:rotate-180 transition-transform ml-4">&#8964;</span>
+              </summary>
+              <p className="mt-3 text-sm text-cream-muted leading-relaxed">
+                {item.a}{' '}
+                <a href={item.link} className="text-accent hover:underline">{item.linkText} &rarr;</a>
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
   )
 }

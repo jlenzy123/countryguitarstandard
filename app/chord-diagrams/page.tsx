@@ -46,9 +46,10 @@ export default function ChordDiagramsPage() {
   const missingChords = uniqueChords.filter((chord) => !getChordData(chord))
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12">
+    <div className="mx-auto max-w-5xl px-4 pt-24 pb-16">
       {/* Header */}
-      <div className="border-l-4 border-barn pl-4">
+      <div className="pt-8">
+        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Tool</p>
         <h1 className="font-display text-2xl sm:text-3xl font-medium text-cream">
           Interactive Chord Diagrams
         </h1>
@@ -60,26 +61,26 @@ export default function ChordDiagramsPage() {
       {/* Back link */}
       <Link
         href="/chord-tool"
-        className="mt-4 inline-flex items-center gap-1 text-gold hover:text-gold/80 transition text-sm"
+        className="mt-4 inline-flex items-center gap-1 text-accent hover:text-accent-hover transition text-sm"
       >
         ← Back to Chord Tool
       </Link>
 
       {/* Controls */}
-      <section className="mt-8 rounded-lg bg-void-card border border-saddle/50 p-4 sm:p-6">
+      <section className="mt-8 rounded-xl bg-void-card border border-white/[0.06] p-4 sm:p-6">
         <h2 className="font-display font-medium text-cream mb-4">Select Progression</h2>
 
         {/* Key selector */}
         <div className="flex flex-wrap gap-4 mb-6">
           <div>
-            <label className="block text-sm text-cream-muted mb-1">Key</label>
+            <label className="block text-xs uppercase tracking-wider text-cream-muted mb-1">Key</label>
             <select
               value={selectedKey}
               onChange={(e) => {
                 setSelectedKey(e.target.value)
                 setSelectedProgressionIndex(0)
               }}
-              className="rounded border border-saddle/50 bg-void-elevated px-3 py-2 text-cream"
+              className="rounded-lg border border-white/[0.08] bg-void-elevated px-3 py-2 text-cream"
             >
               {KEY_ORDER.map((k) => (
                 <option key={k} value={k}>
@@ -90,11 +91,11 @@ export default function ChordDiagramsPage() {
           </div>
 
           <div className="flex-1 min-w-[200px]">
-            <label className="block text-sm text-cream-muted mb-1">Progression</label>
+            <label className="block text-xs uppercase tracking-wider text-cream-muted mb-1">Progression</label>
             <select
               value={selectedProgressionIndex}
               onChange={(e) => setSelectedProgressionIndex(Number(e.target.value))}
-              className="w-full rounded border border-saddle/50 bg-void-elevated px-3 py-2 text-cream"
+              className="w-full rounded-lg border border-white/[0.08] bg-void-elevated px-3 py-2 text-cream"
             >
               {progressions.map((prog, i) => (
                 <option key={i} value={i}>
@@ -111,10 +112,10 @@ export default function ChordDiagramsPage() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setStyleFilter('all')}
-              className={`px-3 py-1.5 rounded text-sm font-medium transition ${
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition ${
                 styleFilter === 'all'
-                  ? 'bg-barn text-white'
-                  : 'bg-denim/10 text-cream hover:bg-denim/20'
+                  ? 'bg-accent text-void'
+                  : 'bg-white/[0.04] text-cream hover:bg-white/[0.08]'
               }`}
             >
               All Voicings
@@ -123,10 +124,10 @@ export default function ChordDiagramsPage() {
               <button
                 key={style.value}
                 onClick={() => setStyleFilter(style.value)}
-                className={`px-3 py-1.5 rounded text-sm font-medium transition ${
+                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition ${
                   styleFilter === style.value
-                    ? 'bg-barn text-white'
-                    : 'bg-denim/10 text-cream hover:bg-denim/20'
+                    ? 'bg-accent text-void'
+                    : 'bg-white/[0.04] text-cream hover:bg-white/[0.08]'
                 }`}
                 title={style.description}
               >
@@ -143,7 +144,7 @@ export default function ChordDiagramsPage() {
               type="checkbox"
               checked={showFingers}
               onChange={(e) => setShowFingers(e.target.checked)}
-              className="rounded border-saddle/50"
+              className="rounded border-white/[0.08]"
             />
             Show finger numbers
           </label>
@@ -154,10 +155,10 @@ export default function ChordDiagramsPage() {
               <button
                 key={s}
                 onClick={() => setDiagramSize(s)}
-                className={`px-2 py-1 rounded text-xs font-medium uppercase transition ${
+                className={`px-2 py-1 rounded-lg text-xs font-medium uppercase transition ${
                   diagramSize === s
-                    ? 'bg-gold text-white'
-                    : 'bg-denim/10 text-cream hover:bg-denim/20'
+                    ? 'bg-accent text-void'
+                    : 'bg-white/[0.04] text-cream hover:bg-white/[0.08]'
                 }`}
               >
                 {s}
@@ -170,7 +171,7 @@ export default function ChordDiagramsPage() {
       {/* Current progression display */}
       <section className="mt-8">
         <h2 className="font-display font-medium text-cream mb-2">
-          Playing: <span className="text-gold">{selectedProgression.join(' → ')}</span>
+          Playing: <span className="text-accent">{selectedProgression.join(' → ')}</span>
         </h2>
         <p className="text-sm text-cream-muted mb-6">
           {uniqueChords.length} unique chord{uniqueChords.length !== 1 ? 's' : ''} in this progression
@@ -178,9 +179,9 @@ export default function ChordDiagramsPage() {
 
         {/* Missing chords warning */}
         {missingChords.length > 0 && (
-          <div className="mb-6 rounded bg-barn/20 border border-barn/50 p-3 text-sm text-cream">
+          <div className="mb-6 rounded bg-accent/10 border border-accent/30 p-3 text-sm text-cream">
             <strong>Note:</strong> Diagrams not yet available for:{' '}
-            <span className="font-mono text-gold">{missingChords.join(', ')}</span>
+            <span className="font-mono text-accent">{missingChords.join(', ')}</span>
           </div>
         )}
 
@@ -193,7 +194,7 @@ export default function ChordDiagramsPage() {
               return (
                 <div
                   key={chordName}
-                  className="flex flex-col items-center justify-center p-4 rounded-lg bg-void-card border border-saddle/30 min-h-[150px]"
+                  className="flex flex-col items-center justify-center p-4 rounded-xl bg-void-card border border-white/[0.06] min-h-[150px]"
                 >
                   <span className="font-display font-medium text-cream text-lg">{chordName}</span>
                   <span className="text-xs text-cream-muted mt-2">Coming soon</span>
@@ -218,11 +219,11 @@ export default function ChordDiagramsPage() {
       </section>
 
       {/* Legend */}
-      <section className="mt-12 rounded-lg bg-void-card border border-saddle/50 p-4 sm:p-6">
+      <section className="mt-12 rounded-xl bg-void-card border border-white/[0.06] p-4 sm:p-6">
         <h3 className="font-display font-medium text-cream mb-3">How to Read</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-cream-muted">
           <div className="flex items-center gap-3">
-            <div className="w-6 h-6 rounded-full bg-barn flex items-center justify-center text-white text-xs font-bold">
+            <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center text-void text-xs font-bold">
               2
             </div>
             <span>Finger number (1=index, 4=pinky)</span>
@@ -238,14 +239,14 @@ export default function ChordDiagramsPage() {
             <span>Open string (play without fretting)</span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-3 rounded-full bg-barn/80"></div>
+            <div className="w-10 h-3 rounded-full bg-accent/80"></div>
             <span>Barre (lay finger across strings)</span>
           </div>
         </div>
       </section>
 
       {/* Tips */}
-      <section className="mt-8 rounded-lg bg-denim/20 border border-denim/40 p-4 sm:p-6">
+      <section className="mt-8 rounded-xl bg-void-elevated border border-white/[0.06] p-4 sm:p-6">
         <h3 className="font-display font-medium text-cream mb-3">Tips</h3>
         <ul className="space-y-2 text-sm text-cream-muted">
           <li>• <strong className="text-cream">Easy voicings</strong> — Fewer fingers, great for beginners or quick changes</li>

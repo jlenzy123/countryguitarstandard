@@ -20,11 +20,11 @@ export default function GuidesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-void pt-32 pb-20">
+    <div className="min-h-screen bg-void pt-24 pb-20">
       {/* Header */}
-      <div className="max-w-4xl mx-auto px-6 mb-16">
-        <div className="palette-stripe mb-8" />
-        <h1 className="text-5xl font-medium mb-4">Guides & Reports</h1>
+      <div className="max-w-4xl mx-auto px-6 mb-16 pt-12">
+        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-4">Resources</p>
+        <h1 className="font-display text-4xl sm:text-5xl font-medium text-cream mb-4">Guides & Reports</h1>
         <p className="text-lg text-cream-muted max-w-2xl">
           Deep-dive analyses of songs, artists, and the music industry. Learn the techniques, patterns, and strategies behind today's biggest hits.
         </p>
@@ -35,10 +35,10 @@ export default function GuidesPage() {
         <div className="flex flex-wrap gap-3">
           <button
             onClick={() => setSelectedType(null)}
-            className={`px-4 py-2 rounded border transition-all ${
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               selectedType === null
-                ? 'bg-barn border-barn text-white'
-                : 'border-barn/50 text-cream hover:border-barn'
+                ? 'bg-accent text-void'
+                : 'border border-white/[0.08] text-cream hover:border-accent/40'
             }`}
           >
             All Guides
@@ -47,10 +47,10 @@ export default function GuidesPage() {
             <button
               key={type.value}
               onClick={() => setSelectedType(type.value)}
-              className={`px-4 py-2 rounded border transition-all ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                 selectedType === type.value
-                  ? 'bg-barn border-barn text-white'
-                  : 'border-barn/50 text-cream hover:border-barn'
+                  ? 'bg-accent text-void'
+                  : 'border border-white/[0.08] text-cream hover:border-accent/40'
               }`}
             >
               {type.label}
@@ -71,17 +71,17 @@ export default function GuidesPage() {
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}
-                className="group bg-void-card border border-barn/20 rounded-lg p-6 hover:border-barn/60 hover:shadow-[0_0_30px_rgba(212,162,78,0.2)] transition-all"
+                className="group bg-void-card border border-white/[0.06] rounded-xl p-6 hover:border-accent/30 hover:shadow-[0_0_30px_rgba(201,168,76,0.1)] transition-all"
               >
                 {/* Type Badge */}
                 <div className="inline-block mb-4">
-                  <span className="text-xs uppercase tracking-wider text-barn font-semibold">
+                  <span className="text-xs uppercase tracking-[0.15em] text-accent">
                     {getGuideTypeLabel(guide.type as any)}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl font-medium mb-2 group-hover:text-barn transition-colors">
+                <h2 className="text-xl font-medium mb-2 group-hover:text-accent transition-colors">
                   {guide.title}
                 </h2>
 
@@ -97,9 +97,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Price & CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-barn/20">
-                  <span className="font-bold text-barn">${guide.price}</span>
-                  <span className="text-barn group-hover:translate-x-1 transition-transform">→</span>
+                <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+                  <span className="font-bold text-accent">${guide.price}</span>
+                  <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </Link>
             ))}
@@ -108,8 +108,8 @@ export default function GuidesPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-4xl mx-auto px-6 mt-20 py-12 bg-void-card border border-barn/30 rounded-lg">
-        <h3 className="text-2xl font-medium mb-2">What's Coming</h3>
+      <div className="max-w-4xl mx-auto px-6 mt-20 py-12 bg-void-elevated rounded-xl border border-white/[0.06]">
+        <h3 className="font-display text-2xl font-medium text-cream mb-2">What's Coming</h3>
         <p className="text-cream-muted mb-4">
           Industry reports on country music trends, more artist deep-dives, and specialized songwriting techniques guides.
         </p>

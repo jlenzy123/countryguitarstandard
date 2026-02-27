@@ -22,8 +22,6 @@ const POSTS = [
   },
 ]
 
-const ACCENT_BORDERS = ['border-l-denim', 'border-l-saddle', 'border-l-barn', 'border-l-gold', 'border-l-teal'] as const
-
 function formatDate(iso: string) {
   const d = new Date(iso)
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
@@ -31,23 +29,24 @@ function formatDate(iso: string) {
 
 export default function BlogPage() {
   return (
-    <div className="mx-auto max-w-2xl px-4 py-8 sm:py-12">
-      <div className="border-l-4 border-denim pl-3 sm:pl-4">
-        <h1 className="font-display text-2xl sm:text-3xl font-semibold text-cream">Blog</h1>
+    <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
+      <div className="pt-8">
+        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Writing</p>
+        <h1 className="font-display text-2xl sm:text-3xl font-medium text-cream">Blog</h1>
         <p className="mt-1 sm:mt-2 text-sm sm:text-base text-cream-muted">
           Album and style reviews, plus tips on country guitar and songwriting.
         </p>
       </div>
 
-      <ul className="mt-8 sm:mt-10 space-y-5 sm:space-y-8">
-        {POSTS.map((post, i) => (
+      <ul className="mt-8 sm:mt-10 space-y-5 sm:space-y-6">
+        {POSTS.map((post) => (
           <li key={post.slug}>
-            <article className={`rounded-lg bg-void-card border-l-4 ${ACCENT_BORDERS[i % 5]} p-4 sm:p-6`}>
-              <time className="text-xs sm:text-sm text-gold" dateTime={post.date}>
+            <article className="rounded-xl bg-void-card border border-white/[0.06] p-4 sm:p-6 hover:border-accent/30 transition-all">
+              <time className="text-xs sm:text-sm text-accent" dateTime={post.date}>
                 {formatDate(post.date)}
               </time>
-              <h2 className="mt-1 sm:mt-2 font-display text-lg sm:text-xl font-semibold text-cream">
-                <Link href={`/blog/${post.slug}`} className="hover:text-gold transition-colors">
+              <h2 className="mt-1 sm:mt-2 font-display text-lg sm:text-xl font-medium text-cream">
+                <Link href={`/blog/${post.slug}`} className="hover:text-accent transition-colors">
                   {post.title}
                 </Link>
               </h2>
@@ -56,7 +55,7 @@ export default function BlogPage() {
               </p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="mt-2 inline-block text-xs sm:text-sm font-medium text-barn hover:text-barn-hover transition-colors"
+                className="mt-2 inline-block text-xs sm:text-sm font-medium text-accent hover:text-accent-hover transition-colors"
               >
                 Read more
               </Link>
@@ -66,7 +65,7 @@ export default function BlogPage() {
       </ul>
 
       <p className="mt-10 sm:mt-12 text-xs sm:text-sm text-cream-muted">
-        <a href="/" className="text-gold hover:underline">Back to home</a>
+        <a href="/" className="text-accent hover:underline">Back to home</a>
       </p>
 
       <div className="mt-10 sm:mt-14">

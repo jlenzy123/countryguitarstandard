@@ -46,7 +46,7 @@ export default function ChordDiagram({
         width={width} 
         height={height} 
         viewBox={`0 0 ${width} ${height}`}
-        className="bg-void-card rounded border border-black/10"
+        className="bg-void-card rounded-lg border border-white/[0.06]"
       >
         {/* Nut (thick line at top) - only show for open position */}
         {!showBaseFret && (
@@ -55,7 +55,7 @@ export default function ChordDiagram({
             y={paddingTop - 3}
             width={fretboardWidth + 4}
             height={4}
-            fill="#d4a574"
+            fill="#c9a84c"
           />
         )}
 
@@ -80,7 +80,7 @@ export default function ChordDiagram({
             y1={paddingTop + i * fretSpacing}
             x2={width - paddingRight}
             y2={paddingTop + i * fretSpacing}
-            stroke={i === 0 ? '#8b7355' : '#d1ccc3'}
+            stroke={i === 0 ? '#c9a84c' : '#3a3a3a'}
             strokeWidth={i === 0 ? 2 : 1}
           />
         ))}
@@ -93,7 +93,7 @@ export default function ChordDiagram({
             y1={paddingTop}
             x2={paddingLeft + i * stringSpacing}
             y2={paddingTop + fretboardHeight}
-            stroke="#b0a898"
+            stroke="#4a4a4a"
             strokeWidth={1 + (5 - i) * 0.15}
           />
         ))}
@@ -106,7 +106,7 @@ export default function ChordDiagram({
             width={fretboardWidth + dotSize}
             height={dotSize}
             rx={dotSize / 2}
-            fill="#b8860b"
+            fill="#c9a84c"
             opacity={0.8}
           />
         )}
@@ -140,7 +140,7 @@ export default function ChordDiagram({
                 cy={paddingTop - 10}
                 r={dotSize / 2 - 1}
                 fill="none"
-                stroke="#8b7355"
+                stroke="#c9a84c"
                 strokeWidth={1.5}
               />
             )
@@ -157,7 +157,7 @@ export default function ChordDiagram({
                 cx={x}
                 cy={y}
                 r={dotSize}
-                fill="#b8860b"
+                fill="#c9a84c"
               />
               {showFingers && finger > 0 && (
                 <text

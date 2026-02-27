@@ -2,56 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Resolve Sans Font Family */
-@font-face {
-  font-family: 'Resolve Sans';
-  src: url('/fonts/resolve-sans/Resolve-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Resolve Sans';
-  src: url('/fonts/resolve-sans/Resolve-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Resolve Sans';
-  src: url('/fonts/resolve-sans/Resolve-Semibold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Resolve Sans';
-  src: url('/fonts/resolve-sans/Resolve-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Resolve Sans';
-  src: url('/fonts/resolve-sans/Resolve-Extrabold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --bg: #fafaf8;
-  --surface: #f0ede8;
-  --card: #ffffff;
-  --text: #1a1a1a;
-  --text-muted: #6b7280;
-  --brand-gold: #b8860b;
-  --brand-gold-dark: #a37608;
-  --accent-gold: #b8860b;
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --card: #161616;
+  --text: #f5f0e8;
+  --text-muted: #9a9590;
+  --accent: #c9a84c;
+  --accent-hover: #dabb5e;
+  --accent-dim: #8b7a3a;
 }
 
 body {
@@ -62,28 +21,27 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Clean accent stripe */
+/* Accent stripe */
 .palette-stripe {
-  height: 2px;
+  height: 1px;
   width: 100%;
-  background: linear-gradient(90deg, transparent, var(--brand-gold), transparent);
+  background: linear-gradient(90deg, transparent 10%, var(--accent) 50%, transparent 90%);
 }
 
-/* Clean card styling - light theme */
+/* Card styling */
 .bg-void-card {
   background-color: var(--card);
-  border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .bg-void-card:hover {
-  border-color: rgba(184, 134, 11, 0.4);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: rgba(201, 168, 76, 0.3);
+  transform: translateY(-2px);
 }
 
-/* Make selects readable */
+/* Selects */
 select {
   background-color: var(--card);
   color: var(--text);
@@ -96,21 +54,15 @@ select option {
   color: var(--text);
 }
 
-/* Mobile improvements */
+/* Mobile */
 @media (max-width: 640px) {
-  body {
-    font-size: 14px;
-  }
-  
-  /* Ensure touch targets are at least 44px */
   a, button {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
   }
-  
-  /* Improve readability on small screens */
+
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.3;
+    line-height: 1.2;
   }
 }

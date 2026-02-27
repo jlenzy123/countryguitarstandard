@@ -9,39 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Resolve Sans', 'system-ui', 'sans-serif'],
-        display: ['Resolve Sans', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-playfair)', 'Georgia', 'serif'],
       },
       colors: {
         void: {
-          DEFAULT: '#fafaf8',
-          elevated: '#f0ede8',
-          card: '#ffffff',
+          DEFAULT: '#0a0a0a',
+          elevated: '#111111',
+          card: '#161616',
         },
         cream: {
-          DEFAULT: '#1a1a1a',
-          muted: '#6b7280',
+          DEFAULT: '#f5f0e8',
+          muted: '#9a9590',
         },
-        // Warm gold accent palette
-        denim: {
-          DEFAULT: '#b8860b',
-          hover: '#a37608',
-        },
-        saddle: {
-          DEFAULT: '#d4a24e',
-          hover: '#c08e3a',
-        },
-        barn: {
-          DEFAULT: '#b8860b',
-          hover: '#a37608',
-        },
-        gold: {
-          DEFAULT: '#b8860b',
-          hover: '#a37608',
-        },
-        teal: {
-          DEFAULT: '#b8860b',
-          hover: '#a37608',
+        accent: {
+          DEFAULT: '#c9a84c',
+          hover: '#dabb5e',
+          dim: '#8b7a3a',
         },
       },
     },
