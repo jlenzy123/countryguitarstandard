@@ -9,9 +9,9 @@ export default function ContactPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
       <div className="pt-8">
-        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Contact</p>
-        <h1 className="font-display text-2xl sm:text-3xl font-medium text-cream">Get in touch</h1>
-        <p className="mt-1 sm:mt-2 text-sm sm:text-base text-cream-muted">
+        <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Contact</p>
+        <h1 className="font-bebas text-4xl sm:text-5xl font-bold text-cream uppercase tracking-wide mb-4">Get in touch</h1>
+        <p className="text-base sm:text-lg text-cream-muted leading-relaxed">
           Have questions, feedback, or want to collaborate? I'd love to hear from you.
         </p>
       </div>
@@ -21,7 +21,7 @@ export default function ContactPage() {
       </div>
 
       <div className="mt-12 sm:mt-16 space-y-4">
-        <h2 className="font-display text-lg font-medium text-cream">Other ways to reach me</h2>
+        <h2 className="font-bebas text-2xl font-bold text-cream uppercase tracking-wide mb-4">Other ways to reach me</h2>
         <ul className="text-sm text-cream-muted space-y-2">
           <li>
             <strong className="text-cream">Email:</strong> check the footer for contact

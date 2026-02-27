@@ -16,16 +16,16 @@ export default function NashvillePage() {
   return (
     <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
       <div className="pt-8">
-        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Tool</p>
-        <h1 className="font-display text-3xl sm:text-4xl font-medium text-cream">Nashville Number System</h1>
-        <p className="mt-2 text-cream-muted">
+        <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Tool</p>
+        <h1 className="font-bebas text-4xl sm:text-5xl font-bold text-cream uppercase tracking-wide mb-4">Nashville Number System</h1>
+        <p className="text-base sm:text-lg text-cream-muted leading-relaxed">
           Convert between chord names and numbers in any key.
         </p>
       </div>
 
       {/* How it works */}
       <section className="mt-10 rounded-xl bg-void-card border border-white/[0.06] p-6">
-        <h2 className="font-display font-medium text-cream">How it works</h2>
+        <h2 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide">How it works</h2>
         <p className="mt-2 text-sm text-cream-muted">
           In any key, the scale degrees are numbered 1–7. The 1 chord is the tonic (e.g. G in G major),
           4 is the subdominant (C), 5 is the dominant (D). Lowercase "m" means minor (e.g. 6m = Em in G).
@@ -38,7 +38,7 @@ export default function NashvillePage() {
       {/* Quick Reference */}
       <section className="mt-8 rounded-xl bg-void-card border border-white/[0.06] p-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-          <h2 className="font-display font-medium text-cream text-xl">Quick Reference</h2>
+          <h2 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide">Quick Reference</h2>
           <select
             value={key}
             onChange={(e) => setKey(e.target.value)}
@@ -80,7 +80,7 @@ export default function NashvillePage() {
 
       {/* Relative Major/Minor Reference */}
       <section className="mt-8 rounded-xl bg-void-card border border-white/[0.06] p-6">
-        <h2 className="font-display font-medium text-cream mb-4">Relative Major & Minor Keys</h2>
+        <h2 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide mb-4">Relative Major & Minor Keys</h2>
         <p className="text-sm text-cream-muted mb-4">
           Every major key has a relative minor that shares the same chords. If you're in a minor key, find it below and use the major key chart above.
         </p>

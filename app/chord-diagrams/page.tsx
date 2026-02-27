@@ -49,11 +49,11 @@ export default function ChordDiagramsPage() {
     <div className="mx-auto max-w-5xl px-4 pt-24 pb-16">
       {/* Header */}
       <div className="pt-8">
-        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Tool</p>
-        <h1 className="font-display text-2xl sm:text-3xl font-medium text-cream">
+        <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Tool</p>
+        <h1 className="font-bebas text-4xl sm:text-5xl font-bold text-cream uppercase tracking-wide mb-4">
           Interactive Chord Diagrams
         </h1>
-        <p className="mt-2 text-cream-muted text-sm sm:text-base leading-relaxed">
+        <p className="text-base sm:text-lg text-cream-muted leading-relaxed">
           Select a progression, see the chord shapes, and switch between easy, open, barre, or power chord voicings.
         </p>
       </div>
@@ -68,7 +68,7 @@ export default function ChordDiagramsPage() {
 
       {/* Controls */}
       <section className="mt-8 rounded-xl bg-void-card border border-white/[0.06] p-4 sm:p-6">
-        <h2 className="font-display font-medium text-cream mb-4">Select Progression</h2>
+        <h2 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide mb-4">Select Progression</h2>
 
         {/* Key selector */}
         <div className="flex flex-wrap gap-4 mb-6">
@@ -170,7 +170,7 @@ export default function ChordDiagramsPage() {
 
       {/* Current progression display */}
       <section className="mt-8">
-        <h2 className="font-display font-medium text-cream mb-2">
+        <h2 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide mb-2">
           Playing: <span className="text-accent">{selectedProgression.join(' → ')}</span>
         </h2>
         <p className="text-sm text-cream-muted mb-6">
@@ -196,7 +196,7 @@ export default function ChordDiagramsPage() {
                   key={chordName}
                   className="flex flex-col items-center justify-center p-4 rounded-xl bg-void-card border border-white/[0.06] min-h-[150px]"
                 >
-                  <span className="font-display font-medium text-cream text-lg">{chordName}</span>
+                  <span className="font-bebas font-bold text-cream text-lg">{chordName}</span>
                   <span className="text-xs text-cream-muted mt-2">Coming soon</span>
                 </div>
               )
@@ -220,7 +220,7 @@ export default function ChordDiagramsPage() {
 
       {/* Legend */}
       <section className="mt-12 rounded-xl bg-void-card border border-white/[0.06] p-4 sm:p-6">
-        <h3 className="font-display font-medium text-cream mb-3">How to Read</h3>
+        <h3 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide mb-3">How to Read</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-cream-muted">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center text-void text-xs font-bold">
@@ -247,7 +247,7 @@ export default function ChordDiagramsPage() {
 
       {/* Tips */}
       <section className="mt-8 rounded-xl bg-void-elevated border border-white/[0.06] p-4 sm:p-6">
-        <h3 className="font-display font-medium text-cream mb-3">Tips</h3>
+        <h3 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide mb-3">Tips</h3>
         <ul className="space-y-2 text-sm text-cream-muted">
           <li>• <strong className="text-cream">Easy voicings</strong> — Fewer fingers, great for beginners or quick changes</li>
           <li>• <strong className="text-cream">Open voicings</strong> — Full sound using open strings (keys of C, G, D, A, E)</li>

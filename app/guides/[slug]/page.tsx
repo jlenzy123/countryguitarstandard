@@ -37,7 +37,7 @@ export default function GuidePage({ params }: GuidePageProps) {
           </span>
         </div>
 
-        <h1 className="font-display text-4xl md:text-5xl font-medium text-cream mb-4">{guide.title}</h1>
+        <h1 className="font-bebas text-4xl md:text-5xl font-bold text-cream uppercase tracking-wide mb-4">{guide.title}</h1>
 
         <div className="flex flex-wrap gap-6 text-sm text-cream-muted">
           <div>
@@ -62,21 +62,21 @@ export default function GuidePage({ params }: GuidePageProps) {
                 {guide.content.split('\n\n').map((paragraph, idx) => {
                   if (paragraph.startsWith('# ')) {
                     return (
-                      <h2 key={idx} className="font-display text-3xl font-medium mt-8 mb-4 text-accent">
+                      <h2 key={idx} className="font-bebas text-3xl font-bold mt-8 mb-4 text-accent uppercase tracking-wide">
                         {paragraph.replace('# ', '')}
                       </h2>
                     );
                   }
                   if (paragraph.startsWith('## ')) {
                     return (
-                      <h3 key={idx} className="font-display text-2xl font-medium mt-6 mb-3 text-accent">
+                      <h3 key={idx} className="font-bebas text-2xl font-bold mt-6 mb-3 text-accent uppercase tracking-wide">
                         {paragraph.replace('## ', '')}
                       </h3>
                     );
                   }
                   if (paragraph.startsWith('### ')) {
                     return (
-                      <h4 key={idx} className="font-display text-xl font-medium mt-5 mb-2 text-accent/80">
+                      <h4 key={idx} className="font-bebas text-xl font-bold mt-5 mb-2 text-accent/80 uppercase tracking-wide">
                         {paragraph.replace('### ', '')}
                       </h4>
                     );
@@ -157,7 +157,7 @@ export default function GuidePage({ params }: GuidePageProps) {
 
       {/* Related Guides */}
       <div className="max-w-3xl mx-auto px-6 mt-20 pt-12 border-t border-white/[0.06]">
-        <h2 className="font-display text-2xl font-medium text-cream mb-6">Related Guides</h2>
+        <h2 className="font-bebas text-2xl font-bold text-cream uppercase tracking-wide mb-6">Related Guides</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-void-card border border-white/[0.06] rounded-xl p-6">
             <span className="text-xs uppercase tracking-[0.15em] text-accent/60">Coming Soon</span>

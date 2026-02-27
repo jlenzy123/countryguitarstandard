@@ -34,9 +34,9 @@ export default function ChordToolPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
       <div className="pt-8">
-        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Tool</p>
-        <h1 className="font-display text-3xl sm:text-4xl font-medium text-cream">Chord Progression Tool</h1>
-        <p className="mt-2 text-cream-muted leading-relaxed">
+        <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Tool</p>
+        <h1 className="font-bebas text-4xl sm:text-5xl font-bold text-cream uppercase tracking-wide mb-4">Chord Progression Tool</h1>
+        <p className="text-base sm:text-lg text-cream-muted leading-relaxed">
           Browse progressions in every key or enter chords you’re playing and get suggestions for what comes next.
         </p>
       </div>
@@ -47,14 +47,14 @@ export default function ChordToolPage() {
         className="mt-8 flex items-center justify-between w-full rounded-xl bg-accent px-6 py-4 text-void hover:bg-accent-hover transition"
       >
         <div>
-          <span className="font-display text-xl font-medium">See Chord Diagrams →</span>
+          <span className="font-bebas text-xl font-bold">See Chord Diagrams →</span>
           <p className="text-sm text-void/70 mt-1">Interactive fingering charts with easy, barre, and power chord options</p>
         </div>
       </Link>
 
       {/* Continue this progression */}
       <section className="mt-10 rounded-xl bg-void-card border border-white/[0.06] p-6">
-        <h2 className="font-display font-medium text-cream">Continue this progression</h2>
+        <h2 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide">Continue this progression</h2>
         <p className="mt-1 text-sm text-cream-muted">
           Enter a key and one or more chords (e.g. C G or G C D Em). We’ll suggest chords that often follow.
         </p>
@@ -96,7 +96,7 @@ export default function ChordToolPage() {
 
       {/* Progressions by key */}
       <section ref={progressionsRef} className="mt-12 rounded-xl bg-void-card border border-white/[0.06] p-6">
-        <h2 className="font-display font-medium text-cream">Progressions by key</h2>
+        <h2 className="font-bebas text-xl font-bold text-cream uppercase tracking-wide">Progressions by key</h2>
         <p className="mt-1 text-sm text-cream-muted">
           All 12 keys. Short and long progressions (4–8 chords), including full-chord country moves.
         </p>

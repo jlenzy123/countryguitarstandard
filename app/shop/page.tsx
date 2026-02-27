@@ -9,9 +9,9 @@ export default function ShopPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 pt-24 pb-16">
       <div className="pt-8">
-        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Store</p>
-        <h1 className="font-display text-3xl sm:text-4xl font-medium text-cream">Shop</h1>
-        <p className="mt-2 text-cream-muted">
+        <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Store</p>
+        <h1 className="font-bebas text-4xl sm:text-5xl font-bold text-cream uppercase tracking-wide mb-4">Shop</h1>
+        <p className="text-base sm:text-lg text-cream-muted leading-relaxed">
           Everything currently available: song guides, artist deep dives, industry reports, and more.
         </p>
       </div>
@@ -23,7 +23,7 @@ export default function ShopPage() {
             className="flex flex-col gap-4 rounded-xl bg-void-card border border-white/[0.06] p-6 sm:flex-row sm:items-center hover:border-accent/30 transition-all"
           >
             <div className="min-w-0 flex-1">
-              <h2 className="font-display font-medium text-cream">{guide.title}</h2>
+              <h2 className="font-bebas font-bold text-cream">{guide.title}</h2>
               <p className="text-sm text-accent">{getGuideTypeLabel(guide.type as any)}</p>
               <p className="mt-2 text-sm text-cream-muted">{guide.excerpt}</p>
             </div>

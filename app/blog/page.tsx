@@ -31,9 +31,9 @@ export default function BlogPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 pt-24 pb-16">
       <div className="pt-8">
-        <p className="text-xs uppercase tracking-[0.2em] text-accent mb-3">Writing</p>
-        <h1 className="font-display text-2xl sm:text-3xl font-medium text-cream">Blog</h1>
-        <p className="mt-1 sm:mt-2 text-sm sm:text-base text-cream-muted">
+        <p className="font-bebas text-sm uppercase tracking-[0.25em] text-accent mb-4">Writing</p>
+        <h1 className="font-bebas text-4xl sm:text-5xl font-bold text-cream uppercase tracking-wide mb-4">Blog</h1>
+        <p className="text-base sm:text-lg text-cream-muted leading-relaxed">
           Album and style reviews, plus tips on country guitar and songwriting.
         </p>
       </div>
@@ -45,7 +45,7 @@ export default function BlogPage() {
               <time className="text-xs sm:text-sm text-accent" dateTime={post.date}>
                 {formatDate(post.date)}
               </time>
-              <h2 className="mt-1 sm:mt-2 font-display text-lg sm:text-xl font-medium text-cream">
+              <h2 className="mt-1 sm:mt-2 font-bebas text-lg sm:text-xl font-bold text-cream uppercase tracking-wide">
                 <Link href={`/blog/${post.slug}`} className="hover:text-accent transition-colors">
                   {post.title}
                 </Link>

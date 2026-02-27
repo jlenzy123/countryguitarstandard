@@ -35,7 +35,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <span className="mx-2">/</span>
         <span>{formatDate(post.date)}</span>
       </p>
-      <h1 className="mt-2 font-display text-2xl sm:text-3xl font-medium text-cream border-b border-white/[0.06] pb-3">
+      <h1 className="mt-2 font-bebas text-3xl sm:text-4xl font-bold text-cream uppercase tracking-wide border-b border-white/[0.06] pb-3">
         {post.title}
       </h1>
       <div className="mt-6 sm:mt-8 text-xs sm:text-sm text-cream-muted leading-relaxed">
