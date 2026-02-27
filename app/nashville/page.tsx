@@ -51,13 +51,13 @@ export default function NashvillePage() {
         </div>
 
         {/* Scale degrees grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-2 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-2 text-center">
           {['1', '2m', '3m', '4', '5', '6m', '7dim'].map((num) => {
             const chord = numbersToChords(num, key).trim()
             return (
-              <div key={num} className="bg-void-elevated rounded-lg p-2 sm:p-3 border border-white/[0.06] overflow-hidden">
-                <div className="text-xs sm:text-sm lg:text-lg font-medium text-cream break-words line-clamp-2">{chord}</div>
-                <div className="text-xs text-cream-muted mt-0.5 sm:mt-1">{num}</div>
+              <div key={num} className="bg-void-elevated rounded-lg p-3 sm:p-3 border border-white/[0.06]">
+                <div className="text-sm sm:text-base lg:text-lg font-medium text-cream">{chord}</div>
+                <div className="text-xs text-cream-muted mt-1 sm:mt-1">{num}</div>
               </div>
             )
           })}
@@ -84,12 +84,12 @@ export default function NashvillePage() {
         <p className="text-sm text-cream-muted mb-4">
           Every major key has a relative minor that shares the same chords. If you're in a minor key, find it below and use the major key chart above.
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-2 text-sm">
           {KEY_ORDER.map((k) => (
-            <div key={k} className="bg-void-elevated rounded-lg px-2 sm:px-3 py-2 border border-white/[0.06] text-center min-w-0">
-              <span className="text-cream break-words">{k}</span>
+            <div key={k} className="bg-void-elevated rounded-lg px-3 py-2 sm:px-3 border border-white/[0.06] text-center">
+              <span className="text-cream">{k}</span>
               <span className="text-cream-muted mx-1">↔</span>
-              <span className="text-cream break-words">{RELATIVE_MINOR[k]}</span>
+              <span className="text-cream">{RELATIVE_MINOR[k]}</span>
             </div>
           ))}
         </div>
